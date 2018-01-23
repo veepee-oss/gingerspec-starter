@@ -20,7 +20,7 @@ Follow the instructions detailed [here](https://www.jfrog.com/confluence/display
 
 Now, you can execute from your computer:
 
-    $ mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=com.privalia -DarchetypeArtifactId=automation-archetype -DarchetypeVersion=1.0-SNAPSHOT
+    $ mvn archetype:generate -DarchetypeGroupId=com.privalia -DarchetypeArtifactId=automation-archetype -DarchetypeVersion=1.0-SNAPSHOT
 
 Follow the on-screen instructions and provide the properties **artifactId**, **groupId** , **version** and  **package**
 
