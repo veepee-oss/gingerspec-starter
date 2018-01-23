@@ -1,0 +1,27 @@
+.classpath
+*.project
+*.settings/*
+*/target/*
+target/*
+.idea/*
+*.ipr
+*.iws
+*.swp
+.DS_Store
+*.iml
+*.log
+_ajdump/
+target/
+.idea/
+
+testOutput.txt
+/target/
+
+# Gradle:
+build/
+.gradle
+gradle
+/classes/
+
+# IntelliJ
+/out/

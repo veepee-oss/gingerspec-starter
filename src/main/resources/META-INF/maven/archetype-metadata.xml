@@ -1,0 +1,55 @@
+<archetype-descriptor>
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    name= "${rootArtifactId}-parent"
+
+    <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>pom.xml</include>
+                <include>README.md</include>
+                <include>CHANGELOG.md</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/test/java/com/privalia/__artifactId__/__package__</directory>
+            <includes>
+                <include>*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/test/java/com/privalia/__artifactId__/specs</directory>
+            <includes>
+                <include>*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/test/java/com/privalia/test/utils</directory>
+            <includes>
+                <include>*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/test/resources</directory>
+            <includes>
+                <include>features/__artifactId__/__package__/*.feature</include>
+                <include>schemas/*.conf</include>
+                <include>schemas/*.json</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="false" encoding="UTF-8">
+            <directory>src/test/resources</directory>
+            <includes>
+                <include>log4j2.xml</include>
+                <include>META-INF/aop.xml</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
