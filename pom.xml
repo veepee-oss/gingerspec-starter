@@ -12,12 +12,12 @@
     <repository>
       <id>central</id>
       <name>spdc1artifactory67-releases</name>
-      <url>http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2</url>
+      <url>http://artifactory-mkp.privalia.pin/artifactory/pmp-product-search-lib-snapshot</url>
     </repository>
     <snapshotRepository>
       <id>snapshots</id>
       <name>spdc1artifactory67-snapshots</name>
-      <url>http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2</url>
+      <url>http://artifactory-mkp.privalia.pin/artifactory/pmp-product-search-lib-snapshot</url>
     </snapshotRepository>
   </distributionManagement>
 
