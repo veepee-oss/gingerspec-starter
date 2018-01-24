@@ -14,13 +14,43 @@ $ mvn archetype:generate -B -DarchetypeArtifactId=maven-archetype-archetype -Dgr
 
 ## Using this archetype
 
-Before you can create projects using this archetype, you will have to modify your settins.xml file in ~/.m2/ in order to indicate maven where to look for this archetype. Fortunally, Jfrog artifactory provides an online tool to generate the proper maven configuration
+Before you can create projects using this archetype, you will have to modify your settins.xml file in ~/.m2/ in order to indicate maven where to look for this archetype. 
 
-Follow the instructions detailed [here](https://www.jfrog.com/confluence/display/RTF/Maven+Repository#MavenRepository-ResolvingArtifactsthroughArtifactory) to generate your own setting.xml file.
+Copy the following configuration in your settings.xml file (~/.m2/settings.xml)
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <profiles>
+            <profile>
+                <repositories>
+                    <repository>
+                        <snapshots>
+                            <enabled>false</enabled>
+                        </snapshots>
+                        <id>central</id>
+                        <name>libs-release</name>
+                        <url>http://artifactory-mkp.privalia.pin/artifactory/pmp-product-search-lib-snapshot</url>
+                    </repository>
+                    <repository>
+                        <snapshots/>
+                        <id>snapshots</id>
+                        <name>libs-snapshot</name>
+                        <url>http://artifactory-mkp.privalia.pin/artifactory/pmp-product-search-lib-snapshot</url>
+                    </repository>
+                </repositories>
+                <id>artifactory</id>
+            </profile>
+        </profiles>
+        <activeProfiles>
+            <activeProfile>artifactory</activeProfile>
+        </activeProfiles>
+    </settings>
+
+
 
 Now, you can execute from your computer:
 
-    $ mvn archetype:generate -DarchetypeGroupId=com.privalia -DarchetypeArtifactId=automation-archetype -DarchetypeVersion=1.0-SNAPSHOT
+    $ mvn -U archetype:generate -DarchetypeGroupId=com.privalia -DarchetypeArtifactId=automation-archetype -DarchetypeVersion=1.0-SNAPSHOT
 
 Follow the on-screen instructions and provide the properties **artifactId**, **groupId** , **version** and  **package**
 
