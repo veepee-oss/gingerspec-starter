@@ -5,6 +5,7 @@ import com.privalia.qa.data.BrowsersDataProvider;
 import cucumber.api.CucumberOptions;
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
+import com.privalia.qa.utils.BaseGTest;
 
 /**
  * This is an example of how to use custom glue files with custom steps for our application.
@@ -18,7 +19,7 @@ import org.testng.annotations.Test;
                 "src/test/resources/features/$artifactId/$package/cucumber_selenium_test.feature"
         },
         glue = "classpath:com/privalia/$artifactId/specs")
-public class CucumberSeleniumIT extends com.privalia.tests.utils.BaseTest {
+public class CucumberSeleniumIT extends BaseTest {
 
     @Factory(dataProviderClass = BrowsersDataProvider.class, dataProvider = "availableUniqueBrowsers")
     public CucumberSeleniumIT(String browser) {
