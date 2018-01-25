@@ -27,7 +27,7 @@ Copy the following configuration in your settings.xml file (~/.m2/settings.xml)
                         <snapshots>
                             <enabled>false</enabled>
                         </snapshots>
-                        <id>central</id>
+                        <id>releases</id>
                         <name>libs-release</name>
                         <url>http://artifactory-mkp.privalia.pin/artifactory/pmp-product-search-lib-snapshot</url>
                     </repository>
