@@ -2,14 +2,15 @@ package com.privalia.${artifactId}.${package};
 
 import com.privalia.qa.cucumber.testng.CucumberRunner;
 import com.privalia.qa.data.BrowsersDataProvider;
+import com.privalia.tests.utils.BaseTest;
+
 import cucumber.api.CucumberOptions;
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
-import com.privalia.qa.utils.BaseGTest;
 
 /**
  * This is an example of how to use custom glue files with custom steps for our application.
- * Step files can also extend {@link com.privalia.tests.utils.BaseTest} to fully access all its methods/properties
+ * Step files can also extend {@link BaseTest} to fully access all its methods/properties
  *
  * Notice that for Selenium related runner classes, is necessary the non-default constructor
  * shown below

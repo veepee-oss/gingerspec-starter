@@ -54,7 +54,6 @@
             -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.8.8/aspectjweaver-1.8.8.jar
           </argLine>
           <useSystemClassloader>true</useSystemClassloader>
-          <skipTests>true</skipTests>
         </configuration>
       </plugin>
     </plugins>

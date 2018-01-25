@@ -79,6 +79,12 @@ The basic project structure is located under:
 
 > src/main/resources/archetype-resources
 
+And the file located at 
+
+> META-INF/maven/archetype-metadata.xml
+
+Indicates what files are to be included in the archetype. If a file is not included, it will not be present in the final project structure when a user generates a project using this artifact, so, make sure to updated if you make any changes in the project tree structure
+
 All projects that make use of this archetype will inherit the same project structure, and the properties 
 **artifactId**, **groupId** , **version** and  **package** specified during the project creation will be used in the corresponding places inside the code to change directory/package names, dependencies in classes, pom settings, etc
 
@@ -135,3 +141,5 @@ To this
         │       │   │   └── CucumberSeleniumIT.class
         │       │   └── specs
         │       │       └── CustomStepsDefinition.class
+
+ 

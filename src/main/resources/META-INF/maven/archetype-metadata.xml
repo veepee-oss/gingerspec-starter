@@ -31,7 +31,7 @@
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-            <directory>src/test/java/com/privalia/test/utils</directory>
+            <directory>src/test/java/com/privalia/tests/utils</directory>
             <includes>
                 <include>*.java</include>
             </includes>
