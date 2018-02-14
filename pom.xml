@@ -20,5 +20,4 @@
       <url>http://artifactory-mkp.privalia.pin/artifactory/pmp-product-search-lib-snapshot</url>
     </snapshotRepository>
   </distributionManagement>
-
 </project>
