@@ -10,6 +10,7 @@
                 <include>pom.xml</include>
                 <include>README.md</include>
                 <include>CHANGELOG.md</include>
+                <include>.gitignore</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
