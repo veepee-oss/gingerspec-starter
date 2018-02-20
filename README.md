@@ -29,13 +29,13 @@ Copy the following configuration in your settings.xml file (~/.m2/settings.xml)
                         </snapshots>
                         <id>releases</id>
                         <name>libs-release</name>
-                        <url>http://artifactory-mkp.privalia.pin/artifactory/pmp-product-search-lib-snapshot</url>
+                        <url>http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2</url>
                     </repository>
                     <repository>
                         <snapshots/>
                         <id>snapshots</id>
                         <name>libs-snapshot</name>
-                        <url>http://artifactory-mkp.privalia.pin/artifactory/pmp-product-search-lib-snapshot</url>
+                        <url>http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2</url>
                     </repository>
                 </repositories>
                 <id>artifactory</id>
