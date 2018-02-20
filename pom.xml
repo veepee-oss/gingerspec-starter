@@ -8,16 +8,16 @@
   <url>http://maven.apache.org</url>
   <packaging>jar</packaging>
 
-  <distributionManagement>
+  <distributionManagement> <!-- Remote Artifactory repository URL where to store the artifacts created after a "mvn deploy"-->
     <repository>
-      <id>central</id>
-      <name>spdc1artifactory67-releases</name>
-      <url>http://artifactory-mkp.privalia.pin/artifactory/pmp-product-search-lib-snapshot</url>
+      <id>releases</id>
+      <name>libs-release</name>
+      <url>http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2</url>
     </repository>
     <snapshotRepository>
       <id>snapshots</id>
-      <name>spdc1artifactory67-snapshots</name>
-      <url>http://artifactory-mkp.privalia.pin/artifactory/pmp-product-search-lib-snapshot</url>
+      <name>libs-snapshot</name>
+      <url>http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
