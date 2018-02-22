@@ -53,13 +53,10 @@ Now, you can execute from your computer:
     $ mvn -U archetype:generate -DarchetypeGroupId=com.privalia -DarchetypeArtifactId=automation-archetype -DarchetypeVersion=0.0.1-SNAPSHOT
 
 
-About the version number
-
-In this example, we are using the version 0.0.1-SNAPSHOT, but you can take a look in
-
-http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2/com/privalia/automation-archetype/
-
-To check all the different versions. Using -DarchetypeVersion=LATEST will automatically download the lastest snapshopt, or you can also use -DarchetypeVersion=RELEASE
+> About the version number
+> In this example, we are using the version 0.0.1-SNAPSHOT, but you can take a look in
+> http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2/com/privalia/automation-archetype/
+> To check all the different versions. Using -DarchetypeVersion=LATEST will automatically download the lastest snapshopt, or you can also use -DarchetypeVersion=RELEASE
 
 
 Follow the on-screen instructions and provide the properties **artifactId**, **groupId** , **version** and  **package**
@@ -69,7 +66,12 @@ Follow the on-screen instructions and provide the properties **artifactId**, **g
 
 If for any reason you are unable to access this archetype using the internal privalia's artifactory (or you want to make changes to this archetype configuration), you can download the project and build it in your local machine:
 
-    Currently, the versioning of artifacts is being handled directly by the pipeline, so you will find a generic <version>##VERSION##</version> tag in the project's pom file. If you are going to make tests locally, you can change this value by a more apropiate version number. For this example, lets say 1.0-SNAPSHOT. The pipeline will require this tag in the pom file of the master branch when generating SNAPSHOTS or RELEASES, so remember to return it to ##VERSION##
+> Currently, the versioning of artifacts is being handled directly
+> by the pipeline, so you will find a generic <version>##VERSION##</version> tag
+> in the project's pom file. If you are going to make tests locally, you can change
+> this value by a more apropiate version number. For this example, lets say 1.0-SNAPSHOT.
+> The pipeline will require this tag in the pom file of the master branch when generating
+> SNAPSHOTS or RELEASES, so remember to return it to ##VERSION##
 
 ``` bash
 $ git clone git@gitlab.privalia.pin:som-qa/automation-archetype.git
