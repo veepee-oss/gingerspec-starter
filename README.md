@@ -50,7 +50,17 @@ Copy the following configuration in your settings.xml file (~/.m2/settings.xml)
 
 Now, you can execute from your computer:
 
-    $ mvn -U archetype:generate -DarchetypeGroupId=com.privalia -DarchetypeArtifactId=automation-archetype -DarchetypeVersion=1.0-SNAPSHOT
+    $ mvn -U archetype:generate -DarchetypeGroupId=com.privalia -DarchetypeArtifactId=automation-archetype -DarchetypeVersion=0.0.1-SNAPSHOT
+
+
+    About the version number
+
+    In this example, we are using the version 0.0.1-SNAPSHOT, but you can take a look in
+
+    http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2/com/privalia/automation-archetype/
+
+    To check all the different versions. Using -DarchetypeVersion=LATEST will automatically download the lastest snapshopt, or you can also use -DarchetypeVersion=RELEASE
+
 
 Follow the on-screen instructions and provide the properties **artifactId**, **groupId** , **version** and  **package**
 
