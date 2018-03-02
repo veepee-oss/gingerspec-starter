@@ -1,5 +1,5 @@
 @web
-Feature: Selenium example feature
+Feature: Testing boit-uat20 login and basic layout
 
     This feature shows an example of how to test a web applicatio using Selenium. Please, notice that
     the @web annotation in the beginning of the feature is NECESSARY, when selenium related tests, since

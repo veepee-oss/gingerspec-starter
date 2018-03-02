@@ -1,5 +1,5 @@
 @rest
-Feature: Testing JSONPlaceholder website (https://jsonplaceholder.typicode.com/)
+Feature: Testing a RestFull API
 
     This feature provides an example for testing a remote REST API. Notice that the @rest
     annotation is NECESSARY when testing REST services, since it indicates the library to

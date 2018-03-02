@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
  * Notice that for Selenium related runner classes, is necessary the non-default constructor
  * shown below
  */
-@CucumberOptions(format = "json:target/cucumber.json", features =
+@CucumberOptions(format = "json:target/CucumberSeleniumIT.json", features =
         {
                 "src/test/resources/features/$artifactId/$package/cucumber_selenium_test.feature"
         },

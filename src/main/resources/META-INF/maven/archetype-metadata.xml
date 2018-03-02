@@ -11,6 +11,7 @@
                 <include>README.md</include>
                 <include>CHANGELOG.md</include>
                 <include>.gitignore</include>
+                <include>jenkins.groovy</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
