@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
  * Glue files can be specified in the {@link CucumberOptions} annotation
  */
 
-@CucumberOptions(format = "json:target/cucumber.json", features =
+@CucumberOptions(format = "json:target/CucumberBackendIT.json", features =
         {
                 "src/test/resources/features/$artifactId/$package/cucumber_backend_test.feature"
         },
