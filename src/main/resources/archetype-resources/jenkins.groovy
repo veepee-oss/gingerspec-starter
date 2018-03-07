@@ -72,11 +72,11 @@ node('master') {
 
     stage("Build") {
 
-        /** Specify the correct URL of the repository*/
-        git branch: '${BRANCH}', credentialsId: 'devops_automation_ssh_key', url: 'git@gitlab.privalia.pin:qa-automation/pilot-project.git'
+        /**Get the code from the same branch/repo of the pipeline*/
+        checkout scm
 
         /** Create new selenium docker of type specified and with aleatory UID and port */
-        if ("${SELENIUM_NODE}" == "allocate new node") {
+        if ("${SELENIUM_NODE}" == "true") {
 
             if ("${BROWSER_TYPE}" == "chrome") {
                 image_browser = docker.image("spdc1k8sregistry11.privalia.pin/privalia-selenium-chrome:62")
@@ -110,9 +110,12 @@ node('master') {
         } finally {
 
             /** Terminate the selenium node docker */
-            if ("${SELENIUM_NODE}" == "allocate new node") {
+            if ("${SELENIUM_NODE}" == "true") {
                 containerService.stop()
             }
+
+            /** Gherkin reporter plugin is not correcting adding a tag in the json report to show scenarios */
+            sh 'sed -i \'/"keyword": "Scenario",/a "type": "Scenario",\' target/*.json'
 
             /** Publish the generated cucumber reports */
             cucumber 'target/*.json'
