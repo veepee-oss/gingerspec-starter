@@ -40,7 +40,7 @@ def image_browser
 def open_port
 
 /** Initial set of staments to execute in the job*/
-statementArray = ["EXIT_STATUS=0", "mvn clean || EXIT_STATUS=\$?", "exit \$EXIT_STATUS"]
+statementArray = ["EXIT_STATUS=0", "mvn -U compile || EXIT_STATUS=\$?", "mvn clean || EXIT_STATUS=\$?", "exit \$EXIT_STATUS"]
 
 /** **************************************************************************************************/
 /** Function to get an aleatory open port. This will be necessary when starting the Selenium node
