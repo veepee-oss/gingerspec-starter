@@ -59,7 +59,7 @@
               <value>com.privalia.qa.utils.JaCoCoClient</value>
             </property>
           </properties>
-          <argLine>-Xmx1024m
+          <argLine>-Xms512m -Xmx1536m
             -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.8.8/aspectjweaver-1.8.8.jar
           </argLine>
           <useSystemClassloader>true</useSystemClassloader>
