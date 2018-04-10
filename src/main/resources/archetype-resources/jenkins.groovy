@@ -116,6 +116,7 @@ node('master') {
 
             /** Gherkin reporter plugin is not correcting adding a tag in the json report to show scenarios */
             sh 'sed -i \'/"keyword": "Scenario",/a "type": "Scenario",\' target/*.json'
+            sh 'sed -i \'/"keyword": "Scenario Outline",/a "type": "Scenario",\' target/*.json'
 
             /** Publish the generated cucumber reports */
             cucumber 'target/*.json'
