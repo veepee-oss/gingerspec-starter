@@ -36,7 +36,7 @@ Feature: Testing a RestFull API
 
     @runOnEnv(SERVER)
     Scenario: Setting headers using a datatable
-        Given My app is running in '${SERVER}'
+        Given I send requests to '${SERVER}'
         Given I set headers:
             | x-user  | myuser     |
             | x-token | 1234567890 |
@@ -48,7 +48,7 @@ Feature: Testing a RestFull API
 
     @runOnEnv(SERVER)
     Scenario: Failed to load resources, no authentication headers
-        Given My app is running in '${SERVER}'
+        Given I send requests to '${SERVER}'
         When I send a 'GET' request to '/api/v1/shipment'
         Then the service response status must be '401'
         And I save element '$' in environment variable 'response'
