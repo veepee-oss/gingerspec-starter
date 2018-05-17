@@ -79,7 +79,7 @@ node('master') {
         if ("${SELENIUM_NODE}" == "true") {
 
             if ("${BROWSER_TYPE}" == "chrome") {
-                image_browser = docker.image("spdc1k8sregistry11.privalia.pin/privalia-selenium-chrome:62")
+                image_browser = docker.image("spdc1k8sregistry11.privalia.pin/privalia-selenium-chrome:64")
             }
 
             image_browser.pull()
