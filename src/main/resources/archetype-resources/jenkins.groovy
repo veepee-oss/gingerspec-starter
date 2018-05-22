@@ -121,6 +121,9 @@ node('master') {
             /** Publish the generated cucumber reports */
             cucumber 'target/*.json'
 
+            /** Publish screenshots taken if any selenium feature failed (if any) */
+            archiveArtifacts artifacts: 'target/executions/**'
+
         }
     }
 }
