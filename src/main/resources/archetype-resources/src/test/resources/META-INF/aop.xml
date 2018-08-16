@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
 <aspectj>
     <aspects>
+        <aspect name="com.privalia.qa.aspects.LoopIncludeTagAspect" />
         <aspect name="com.privalia.qa.aspects.LogTagAspect" />
         <aspect name="com.privalia.qa.aspects.RunOnTagAspect" />
         <aspect name="com.privalia.qa.aspects.IgnoreTagAspect" />
