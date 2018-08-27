@@ -49,6 +49,7 @@
         <fileSet filtered="false" encoding="UTF-8">
             <directory>src/test/resources</directory>
             <includes>
+                <include>configuration/*.properties</include>
                 <include>log4j2.xml</include>
                 <include>META-INF/aop.xml</include>
             </includes>
