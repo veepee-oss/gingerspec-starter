@@ -25,7 +25,7 @@
  */
 
 /**Default maven image*/
-def image_maven = docker.image("spdc1k8sregistry11.privalia.pin/privalia-qa-worker:0.1.0")
+def image_maven = docker.image("harbor.privalia-test.com/qa/privalia-qa-worker:0.1.0")
 
 /**Function to get the url of the jenkins server*/
 def jenkins_ip = InetAddress.localHost.canonicalHostName
@@ -79,7 +79,7 @@ node('master') {
         if ("${SELENIUM_NODE}" == "true") {
 
             if ("${BROWSER_TYPE}" == "chrome") {
-                image_browser = docker.image("spdc1k8sregistry11.privalia.pin/privalia-selenium-chrome:64")
+                image_browser = docker.image("harbor.privalia-test.com/qa/privalia-selenium-chrome:64")
             }
 
             image_browser.pull()
