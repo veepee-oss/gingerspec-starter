@@ -1,21 +1,12 @@
 Feature: Testing backend related functionality
 
   This class provides an example on how to use other functionality of the testing library (functionality
-  related to SSH, SCP, use of variables, JSON replacing, etc).
+  related to the use of variables, JSON replacing, etc).
+
+  Execute this tests like this: mvn verify -Dit.test=${package}.${artifactId}.CucumberBackendIT
 
   You can check a more complete list of steps and examples at:
-  http://confluence.privalia.pin/pages/viewpage.action?pageId=28754735
-
-  Scenario: Connecting to a remote server using ssh and executing commands
-    Given I open a ssh connection to '${SERVER}' with user '${USER}' and password '${PASSWORD}'
-    When I run 'ls -la /tmp' in the ssh connection
-    Then the command output contains 'total'
-
-  Scenario: Using scp to copy files from/to a remote server
-    Given I open a ssh connection to '${SERVER}' with user '${USER}' and password '${PASSWORD}'
-    Then I inbound copy '/tmp/php_error.log' through a ssh connection to 'src/test/resources/schemas'
-    When I outbound copy '/tmp/error_log.txt' through a ssh connection to '/tmp/'
-    Then in less than '20' seconds, checking each '2' seconds, the command output 'ls' contains 'test.txt'
+  https://confluence.vptech.eu/pages/viewpage.action?pageId=5442503
 
   Scenario: Storing environmental variables in the feature
     Given I run 'ls -l' locally with exit status '0' and save the value in environment variable 'DEFEXSTAT'

@@ -1,4 +1,4 @@
-package com.privalia.${artifactId}.specs;
+package ${package}.specs;
 
 import com.privalia.qa.specs.*;
 import cucumber.api.java.en.Given;

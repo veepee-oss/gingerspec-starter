@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.privalia.tests.utils;
+package ${package}.utils;
 
 
 import com.privalia.qa.cucumber.testng.ICucumberFormatter;

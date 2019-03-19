@@ -7,7 +7,7 @@ Feature: Testing a RestFull API
 
     This example uses https://jsonplaceholder.typicode.com, Fake Online REST API for Testing and Prototyping
 
-    Execution: mvn verify -Dit.test=com.privalia.myproject.mypackage.CucumberRestIT
+    Execution: mvn verify -Dit.test=${package}.${artifactId}.CucumberRestIT
 
     Scenario: A successful response with a valid body is returned
         Given I securely send requests to 'jsonplaceholder.typicode.com:443'

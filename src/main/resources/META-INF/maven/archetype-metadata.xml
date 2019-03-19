@@ -21,19 +21,19 @@
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-            <directory>src/test/java/com/privalia/__artifactId__/__package__</directory>
+            <directory>src/test/java/__package__/__artifactId__</directory>
             <includes>
                 <include>*.java</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-            <directory>src/test/java/com/privalia/__artifactId__/specs</directory>
+            <directory>src/test/java/__package__/specs</directory>
             <includes>
                 <include>*.java</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-            <directory>src/test/java/com/privalia/tests/utils</directory>
+            <directory>src/test/java/__package__/utils</directory>
             <includes>
                 <include>*.java</include>
             </includes>
@@ -41,7 +41,7 @@
         <fileSet filtered="true" encoding="UTF-8">
             <directory>src/test/resources</directory>
             <includes>
-                <include>features/__artifactId__/__package__/*.feature</include>
+                <include>features/*.feature</include>
                 <include>schemas/*.conf</include>
                 <include>schemas/*.json</include>
             </includes>
