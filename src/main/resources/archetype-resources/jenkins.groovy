@@ -95,8 +95,8 @@ node('master') {
          * BROWSER_TYPE (Stores the browser type i.e. "chrome")
          * BROWSER_NAME (Stores the randomly generated browser name)
          * */
-        this.addStamenet("mvn verify -Dit.test=${package}.${artifactId}.CucumberRestIT")
-        this.addStamenet("mvn verify -Dit.test=${package}.${artifactId}.CucumberSeleniumIT -DSELENIUM_GRID=${SELENIUM_GRID_HOST}:${SELENIUM_GRID_PORT} -DFORCE_BROWSER=${BROWSER_TYPE}_${BROWSER_NAME}")
+        this.addStamenet("mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberRestIT")
+        this.addStamenet("mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberSeleniumIT -DSELENIUM_GRID=${SELENIUM_GRID_HOST}:${SELENIUM_GRID_PORT} -DFORCE_BROWSER=${BROWSER_TYPE}_${BROWSER_NAME}")
 
         image_maven.pull()
 

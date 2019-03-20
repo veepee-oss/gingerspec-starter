@@ -26,19 +26,19 @@
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-            <directory>src/test/java/__package__/__artifactId__</directory>
+            <directory>src/test/java/__groupId__/__artifactId__/__package__</directory>
             <includes>
                 <include>*.java</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-            <directory>src/test/java/__package__/specs</directory>
+            <directory>src/test/java/__groupId__/__artifactId__/specs</directory>
             <includes>
                 <include>*.java</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-            <directory>src/test/java/__package__/utils</directory>
+            <directory>src/test/java/__groupId__/__artifactId__/utils</directory>
             <includes>
                 <include>*.java</include>
             </includes>
@@ -46,7 +46,7 @@
         <fileSet filtered="true" encoding="UTF-8">
             <directory>src/test/resources</directory>
             <includes>
-                <include>features/*.feature</include>
+                <include>features/__package__/*.feature</include>
                 <include>schemas/*.conf</include>
                 <include>schemas/*.json</include>
             </includes>

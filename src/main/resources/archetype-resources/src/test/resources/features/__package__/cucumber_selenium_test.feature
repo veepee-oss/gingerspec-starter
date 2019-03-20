@@ -8,7 +8,7 @@ Feature: Testing boit-uat20 login and basic layout
     Mind that for any Selenium related feature (like this one), is NECESSARY to indicate the address of
     the Selenium Grid service to execute it, in this way:
 
-    mvn verify -Dit.test=${package}.${artifactId}.CucumberSeleniumIT -DSELENIUM_GRID=127.0.0.1:4444
+    mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberSeleniumIT -DSELENIUM_GRID=127.0.0.1:4444
 
     Head over https://confluence.vptech.eu/pages/viewpage.action?pageId=5442497 to find more information
     on how to start your own Selenium Grid service to execute this test

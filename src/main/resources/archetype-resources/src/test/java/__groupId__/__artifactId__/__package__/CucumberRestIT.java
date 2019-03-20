@@ -1,9 +1,9 @@
-package ${package}.${artifactId};
+package ${groupId}.${artifactId}.${package};
 
 import com.privalia.qa.cucumber.testng.CucumberRunner;
 import cucumber.api.CucumberOptions;
 import org.testng.annotations.Test;
-import ${package}.utils.BaseTest;
+import ${groupId}.${artifactId}.utils.BaseTest;
 
 
 /**
@@ -13,9 +13,9 @@ import ${package}.utils.BaseTest;
 
 @CucumberOptions(format = "json:target/CucumberRestIT.json", features =
         {
-                "src/test/resources/features/cucumber_rest_test.feature"
+                "src/test/resources/features/$package/cucumber_rest_test.feature"
         },
-        glue = "classpath:${package}.specs")
+        glue = "classpath:$groupId.$artifactId.specs")
 public class CucumberRestIT extends BaseTest {
 
     @Test(enabled = true)

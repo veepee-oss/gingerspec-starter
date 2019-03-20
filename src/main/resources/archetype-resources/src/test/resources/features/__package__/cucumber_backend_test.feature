@@ -3,7 +3,7 @@ Feature: Testing backend related functionality
   This class provides an example on how to use other functionality of the testing library (functionality
   related to the use of variables, JSON replacing, etc).
 
-  Execute this tests like this: mvn verify -Dit.test=${package}.${artifactId}.CucumberBackendIT
+  Execute this tests like this: mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberBackendIT
 
   You can check a more complete list of steps and examples at:
   https://confluence.vptech.eu/pages/viewpage.action?pageId=5442503
