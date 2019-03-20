@@ -22,16 +22,12 @@ Give examples
 
 Explain how to run the automated tests for this system
 
+Example: 
 mvn verify [-D\<ENV_VAR>=\<VALUE>] [-Dit.test=\<TEST_TO_EXECUTE>|-Dgroups=\<GROUP_TO_EXECUTE>]  
   
-Example:  
-    mvn verify -Dit.test=${package}.${artifactId}.CucumberSeleniumIT -DSELENIUM_GRID=127.0.0.1:4444 -DlogLevel=DEBUG  
-      
-1. -Dit.test=${package}.${artifactId}.CucumberSeleniumIT to run test (feature) o test suite (group of features)  
-2. -DlogLevel=DEBUG to see the Scenario steps printed  
-3. -DSELENIUM_GRID=127.0.0.1:4444 Selenium Grid (if the test requires selenium)  
-  
- 
+More information on how to run automated tests can be found [here](https://confluence.vptech.eu/pages/viewpage.action?pageId=5442509)
+
+
 ### Break down into end to end tests
 
 Explain what these tests test and why
