@@ -3,8 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.privalia</groupId>
   <artifactId>automation-archetype</artifactId>
-  <!--<version>##VERSION##</version>-->
-  <version>1.0</version>
+  <version>##VERSION##</version>
 
   <name>Archetype - automation-archetype</name>
   <url>http://maven.apache.org</url>
