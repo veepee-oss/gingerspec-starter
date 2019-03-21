@@ -1,9 +1,9 @@
-package com.privalia.${artifactId}.${package};
+package ${groupId}.${artifactId}.${package};
 
 import com.privalia.qa.cucumber.testng.CucumberRunner;
-import com.privalia.qa.utils.BaseGTest;
 import cucumber.api.CucumberOptions;
 import org.testng.annotations.Test;
+import ${groupId}.${artifactId}.utils.BaseTest;
 
 
 /**
@@ -11,12 +11,12 @@ import org.testng.annotations.Test;
  * Glue files can be specified in the {@link CucumberOptions} annotation
  */
 
-@CucumberOptions(format = "json:target/CucumberBackendIT.json", features =
+@CucumberOptions(format = "json:target/CucumberRestIT.json", features =
         {
-                "src/test/resources/features/$artifactId/$package/cucumber_backend_test.feature"
+                "src/test/resources/features/$package/cucumber_rest_test.feature"
         },
-        glue = "classpath:com/privalia/$artifactId/specs")
-public class CucumberBackendIT extends BaseGTest {
+        glue = "classpath:$groupId.$artifactId.specs")
+public class CucumberRestIT extends BaseTest {
 
     @Test(enabled = true)
     public void runSmokeTests() throws Exception {

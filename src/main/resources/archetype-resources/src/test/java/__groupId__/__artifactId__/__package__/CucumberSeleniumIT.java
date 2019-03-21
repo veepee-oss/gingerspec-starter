@@ -1,8 +1,8 @@
-package com.privalia.${artifactId}.${package};
+package ${groupId}.${artifactId}.${package};
 
 import com.privalia.qa.cucumber.testng.CucumberRunner;
 import com.privalia.qa.data.BrowsersDataProvider;
-import com.privalia.tests.utils.BaseTest;
+import ${groupId}.${artifactId}.utils.BaseTest;
 
 import cucumber.api.CucumberOptions;
 import org.testng.annotations.Factory;
@@ -17,9 +17,9 @@ import org.testng.annotations.Test;
  */
 @CucumberOptions(format = "json:target/CucumberSeleniumIT.json", features =
         {
-                "src/test/resources/features/$artifactId/$package/cucumber_selenium_test.feature"
+                "src/test/resources/features/$package/cucumber_selenium_test.feature"
         },
-        glue = "classpath:com/privalia/$artifactId/specs")
+        glue = "classpath:$groupId.$artifactId.specs")
 public class CucumberSeleniumIT extends BaseTest {
 
     @Factory(dataProviderClass = BrowsersDataProvider.class, dataProvider = "availableUniqueBrowsers")

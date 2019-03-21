@@ -4,6 +4,7 @@
   <groupId>com.privalia</groupId>
   <artifactId>automation-archetype</artifactId>
   <version>##VERSION##</version>
+
   <name>Archetype - automation-archetype</name>
   <url>http://maven.apache.org</url>
   <packaging>jar</packaging>

@@ -1,17 +1,17 @@
 @web
 Feature: Testing boit-uat20 login and basic layout
 
-    This feature shows an example of how to test a web applicatio using Selenium. Please, notice that
-    the @web annotation in the beginning of the feature is NECESSARY, when selenium related tests, since
-    it indicates the library to bootstrap some necessary dependencies. Failing to do so will make your
-    feature fail.
+    This feature shows an example of how to test a web application using Selenium. Please, notice that
+    the @web annotation in the beginning of the feature is NECESSARY since it indicates the library to
+    bootstrap some necessary dependencies. Failing to do so will make your feature fail.
 
     Mind that for any Selenium related feature (like this one), is NECESSARY to indicate the address of
     the Selenium Grid service to execute it, in this way:
 
-    mvn verify -Dit.test=com.privalia.myproject.mypackage.CucumberSeleniumIT -DSELENIUM_GRID=172.17.0.1:4444
+    mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberSeleniumIT -DSELENIUM_GRID=127.0.0.1:4444
 
-    Head over http://confluence.privalia.pin/pages/viewpage.action?pageId=29425961 to find more information
+    Head over https://confluence.vptech.eu/pages/viewpage.action?pageId=5442497 to find more information
+    on how to start your own Selenium Grid service to execute this test
 
     Scenario: Verify that the logistic orders page displays correctly 11 clickable buttons in the top navigation bar
         Given My app is running in 'boit-uat24.privalia-test.com:80'

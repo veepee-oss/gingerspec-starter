@@ -7,12 +7,12 @@
   Consider to check more up-to-date version numbers of the parent-pom here:
   http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2/com/privalia/parent
 
-  And for the the bdt-lib library here:
+  And for the the gingerspec library here:
   http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2/com/privalia/bdt-lib
   -->
 
   <properties>
-    <privalia.bdt.lib.version>1.0.0-SNAPSHOT</privalia.bdt.lib.version> <!-- bdt-lib library version-->
+    <privalia.gingerspec.version>1.0.0-SNAPSHOT</privalia.gingerspec.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
@@ -71,8 +71,8 @@
   <dependencies>
     <dependency>
       <groupId>com.privalia</groupId>
-      <artifactId>bdt-lib</artifactId>
-      <version>${privalia.bdt.lib.version}</version>
+      <artifactId>gingerspec</artifactId>
+      <version>${privalia.gingerspec.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>

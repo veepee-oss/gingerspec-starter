@@ -1,29 +1,60 @@
-# README
 
-## ACCEPTANCE TESTS
+# Project Title
 
-Cucumber automated acceptance tests.
-This module depends on a QA library (bdt-lib), where common logic and steps are implemented.
-
-## EXECUTION
-
-These tests will be executed as part of the continuous integration flow as follows:
-
-mvn verify [-D\<ENV_VAR>=\<VALUE>] [-Dit.test=\<TEST_TO_EXECUTE>|-Dgroups=\<GROUP_TO_EXECUTE>]
-
-Example (Purchase Order test):
- mvn verify -Dit.test=com.privalia.som.bo.po.POTestsIT.java -DUSER=myuser -DPASSWORD=mypassword -DlogLevel=DEBUG  -DSELENIUM_GRID=172.17.0.1:4444
-
-1. -Dit.test=com.privalia.som.bo.po.POTestsIT.java to run test (feature) o test suite (group of features)
-2. -DlogLevel=DEBUG to see the Scenario steps printed
-3. -DSELENIUM_GRID=172.17.0.1:4444  Selenium Grid
+One Paragraph of project description goes here
 
 
-### Up Selenium Grid and Selenium Server with Chrome Driver:
+## Getting Started
 
-java -jar selenium-server-standalone-3.4.0.jar -role hub
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-standalone-3.4.0.jar -host localhost -role node -hub http://localhost:4444/grid/register -browser browserName=chrome,version=mybrowser &
-v:mybrowser
 
-Example: mvn verify -Dit.test=com.privalia.myproject.mypackage.CucumberRestIT.java
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+Give examples
+```
+
+
+### Running the tests
+
+Explain how to run the automated tests for this system
+
+Example: 
+mvn verify [-D\<ENV_VAR>=\<VALUE>] [-Dit.test=\<TEST_TO_EXECUTE>|-Dgroups=\<GROUP_TO_EXECUTE>]  
+  
+More information on how to run automated tests can be found [here](https://confluence.vptech.eu/pages/viewpage.action?pageId=5442509)
+
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+
+### Release History
+
+* 0.0.1
+    * Work in progress
+    
+
+### Authors
+
+* **John Smith** - *Initial work* -
+
+  
+### The GingerSpec testing library
+  
+This module depends on the GingerSpec framework (QA testing library), where common logic and steps are implemented. 
+  
+Check more information about the GingerSpec framework [here](https://confluence.vptech.eu/pages/viewpage.action?pageId=5442509)  
+
+List of all the steps in the library [here
+](https://confluence.vptech.eu/pages/viewpage.action?pageId=5442503)
+
+Follow the instructions [here](https://confluence.vptech.eu/pages/viewpage.action?pageId=5442497) to set up your own local Selenium Grid to use in your tests if necessary
