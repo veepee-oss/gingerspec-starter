@@ -17,12 +17,6 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
 
-  <parent>
-    <groupId>com.privalia</groupId>
-    <artifactId>parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version> <!-- parent-pom version-->
-  </parent>
-
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
   <version>${version}</version>
@@ -33,6 +27,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5</version>
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
@@ -41,6 +36,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.19.1</version>
         <configuration>
           <skipTests>true</skipTests>
         </configuration>
@@ -48,6 +44,15 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
+        <version>2.19.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
         <configuration>
           <properties>
             <property>
