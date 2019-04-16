@@ -1,13 +1,13 @@
-Automation archetype
+GingerSpec starter
 =============================
 
 A maven archetype for creating new automation projects.
 
-When creating new automation projects that make use of the bdt-lib library (http://gitlab.privalia.pin/qa-automation/bdt-lib), you can use this maven archetype to rapidly bootstrap a simple project layout, with all dependencies pre-configured and ready to use. The layout also provides code examples on how to use the library, making it easy to create your own tests
+When creating new automation projects that make use of the gingerspec library (https://github.com/PrivaliaTech/gingerspec), you can use this maven archetype to rapidly bootstrap a simple project layout, with all dependencies pre-configured and ready to use. The layout also provides code examples on how to use the library, making it easy to create your own tests
 
 This archetype makes use of **maven-archetype-archetype**, a maven archetype for creating archetypes
 ``` bash
-$ mvn archetype:generate -B -DarchetypeArtifactId=maven-archetype-archetype -DgroupId=com.privalia -DartifactId=automation-archetype -Dpackage=package
+$ mvn archetype:generate -B -DarchetypeArtifactId=maven-archetype-archetype -DgroupId=com.github.privaliatech -DartifactId=gingerspec-starter -Dpackage=package
 ```
 
 # How to use this maven archetype

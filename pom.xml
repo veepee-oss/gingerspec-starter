@@ -1,24 +1,64 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.privalia</groupId>
-  <artifactId>automation-archetype</artifactId>
-  <version>##VERSION##</version>
+  <groupId>com.github.privaliatech</groupId>
+  <artifactId>gingerspec-starter</artifactId>
+  <version>1.0-SNAPSHOT</version>
 
-  <name>Archetype - automation-archetype</name>
-  <url>http://maven.apache.org</url>
+  <name>Archetype - gingerspec-starter</name>
+  <url>https://github.com/PrivaliaTech/gingerspec-starter</url>
   <packaging>jar</packaging>
 
-  <distributionManagement> <!-- Remote Artifactory repository URL where to store the artifacts created after a "mvn deploy"-->
+  <scm>
+    <connection>scm:git:https://github.com/PrivaliaTech/gingerspec-starter.git</connection>
+    <url>https://github.com/PrivaliaTech/gingerspec-starter</url>
+  </scm>
+
+  <organization>
+    <name>Privalia</name>
+    <url>https://es.privalia.com/</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>otarasyuk-privalia</id>
+      <name>Oleksandr Tarasyuk</name>
+      <email>otarasyuk at privalia.pin</email>
+    </developer>
+    <developer>
+      <id>jfernandez-privalia</id>
+      <name>Jose Fernandez</name>
+      <email>jfernandez at privalia.pin</email>
+    </developer>
+  </developers>
+
+  <repositories>
     <repository>
-      <id>releases</id>
-      <name>libs-release</name>
-      <url>http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2</url>
+      <id>confluent</id>
+      <url>http://packages.confluent.io/maven/</url>
     </repository>
+  </repositories>
+
+  <distributionManagement>
+    <site>
+      <id>api.wiki</id>
+      <url>https://github.com/PrivaliaTech/gingerspec-starter/blob/master/README.md</url>
+    </site>
     <snapshotRepository>
-      <id>snapshots</id>
-      <name>libs-snapshot</name>
-      <url>http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2</url>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
   </distributionManagement>
 </project>
