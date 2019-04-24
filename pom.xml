@@ -1,64 +1,147 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.github.privaliatech</groupId>
-  <artifactId>gingerspec-starter</artifactId>
-  <version>1.0-SNAPSHOT</version>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <name>Archetype - gingerspec-starter</name>
-  <url>https://github.com/PrivaliaTech/gingerspec-starter</url>
-  <packaging>jar</packaging>
+    <groupId>com.github.privaliatech</groupId>
+    <artifactId>gingerspec-starter</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-  <scm>
-    <connection>scm:git:https://github.com/PrivaliaTech/gingerspec-starter.git</connection>
+    <name>Archetype - gingerspec-starter</name>
+    <description>A maven archetype for creating new automation projects based on gingerspec library.</description>
     <url>https://github.com/PrivaliaTech/gingerspec-starter</url>
-  </scm>
+    <packaging>jar</packaging>
 
-  <organization>
-    <name>Privalia</name>
-    <url>https://es.privalia.com/</url>
-  </organization>
+    <scm>
+        <connection>scm:git:https://github.com/PrivaliaTech/gingerspec-starter.git</connection>
+        <url>https://github.com/PrivaliaTech/gingerspec-starter</url>
+    </scm>
 
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+    <organization>
+        <name>Privalia</name>
+        <url>https://es.privalia.com/</url>
+    </organization>
 
-  <developers>
-    <developer>
-      <id>otarasyuk-privalia</id>
-      <name>Oleksandr Tarasyuk</name>
-      <email>otarasyuk at privalia.pin</email>
-    </developer>
-    <developer>
-      <id>jfernandez-privalia</id>
-      <name>Jose Fernandez</name>
-      <email>jfernandez at privalia.pin</email>
-    </developer>
-  </developers>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-  <repositories>
-    <repository>
-      <id>confluent</id>
-      <url>http://packages.confluent.io/maven/</url>
-    </repository>
-  </repositories>
+    <developers>
+        <developer>
+            <id>otarasyuk-privalia</id>
+            <name>Oleksandr Tarasyuk</name>
+            <email>otarasyuk at privalia.pin</email>
+        </developer>
+        <developer>
+            <id>jfernandez-privalia</id>
+            <name>Jose Fernandez</name>
+            <email>jfernandez at privalia.pin</email>
+        </developer>
+    </developers>
 
-  <distributionManagement>
-    <site>
-      <id>api.wiki</id>
-      <url>https://github.com/PrivaliaTech/gingerspec-starter/blob/master/README.md</url>
-    </site>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
+    <repositories>
+        <repository>
+            <id>confluent</id>
+            <url>http://packages.confluent.io/maven/</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <site>
+            <id>api.wiki</id>
+            <url>https://github.com/PrivaliaTech/gingerspec/blob/master/README.md</url>
+        </site>
+
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+
+    </distributionManagement>
+
+
+    <profiles>
+        <profile>
+            <id>sign</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>build-extras</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>2.4</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>2.10.3</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <!-- To release to Maven central -->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.8</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
