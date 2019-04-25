@@ -1,6 +1,10 @@
 GingerSpec starter
 =============================
 
+[![Build Status](https://travis-ci.com/PrivaliaTech/gingerspec-starter.svg)](https://travis-ci.org/rest-assured/rest-assured)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.rest-assured/rest-assured)
+
+
 A maven archetype for creating new automation projects.
 
 When creating new automation projects that make use of the gingerspec library (https://github.com/PrivaliaTech/gingerspec), you can use this maven archetype to rapidly bootstrap a simple project layout, with all dependencies pre-configured and ready to use. The layout also provides code examples on how to use the library, making it easy to create your own tests
