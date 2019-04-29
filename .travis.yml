@@ -32,7 +32,7 @@ deploy:
   on:
     repo: PrivaliaTech/gingerspec-starter
     branch: master
-    branch: /^release-.*$/
+    branch: /^release.*$/
   name: $project_version
 
 
