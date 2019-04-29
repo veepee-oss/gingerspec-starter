@@ -9,8 +9,8 @@ install:
     mvn --settings cd/mvnsettings.xml install -DskipTests=true -Dgpg.skip -Dmaven.javadoc.skip=true -B -V
 
 ## Build and release to maven central
-script:
-    mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
+#script:
+#    mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
 
 
 ## Get the project version
@@ -21,18 +21,21 @@ before_deploy:
 
 ### Create release in GitHub
 deploy:
-  provider: releases
-  api_key:
-    secure: y6ttGjG9N72qwvmRAGS219JCGyEBhN23ZWXOj3rUIFcJvmbbXlfSmB8Kx6N3b8emI2sQnkmwPzlPGd+rO2iIdX8okqd2MMeZwiVtU5UvLSWUm/tWc7dnM6obmDIXDUk80mSMm5DzfK2yW03GsP0ghsvv+yh7EZzQyPVmZn4UgbP0/uyU2qowInaF1xcEN/ef06jJa28y0FFwLZm0tCimyBTICrG/it5aFTrHZSRZnzzZN8cur9US7zxeH7qjnLCmW4Ps3xtoH7phOTgScGu/jv/HXLP/2Ut9BcJwBoZYv2y9ZVkuuOuXJ2KTa0NPF5nD8/3cIUhAmeYzVEsCjA8CUJgbUdzOPcEAM9WRb2fu0QSq1WjFcnV5PgNpBe1X09/Xk1qdiRNilx6u3Yb/IDA1NnbAzY0EqibCZhQBus5SG3fjCUvbbVAdc4lPGWQJCbUX56CRDmtvd4EOicoLjNc5hFgCCGEisxNiiNihZtWK8aRoNc/IU4jC2zxgKZQ2CVj1Q/tpxMQhDbLrrAtBGZOaLON0PML0lJyLK3vp3dP2tKIaWdg7vXjJm7WdoajtNXCH0TyKLUJWmpoayRrM8v2xG4Qk+2OiDrZ60FL/I8bnP3RpfefGcfN/vGPsYETqT5yFsfZ5G3U9GnOFrg9k9DjsBShNZsh/r0V8y3ocjbPYPoI=
-  file:
-    - gingerspec-starter/target/gingerspec-starter-$project_version.jar
-  on:
-    repo: PrivaliaTech/gingerspec-starter
-    branch: master
-    branch: /^deploy.*$/
-
-  name: $project_version
-
+  - provider: releases
+    api_key:
+      secure: y6ttGjG9N72qwvmRAGS219JCGyEBhN23ZWXOj3rUIFcJvmbbXlfSmB8Kx6N3b8emI2sQnkmwPzlPGd+rO2iIdX8okqd2MMeZwiVtU5UvLSWUm/tWc7dnM6obmDIXDUk80mSMm5DzfK2yW03GsP0ghsvv+yh7EZzQyPVmZn4UgbP0/uyU2qowInaF1xcEN/ef06jJa28y0FFwLZm0tCimyBTICrG/it5aFTrHZSRZnzzZN8cur9US7zxeH7qjnLCmW4Ps3xtoH7phOTgScGu/jv/HXLP/2Ut9BcJwBoZYv2y9ZVkuuOuXJ2KTa0NPF5nD8/3cIUhAmeYzVEsCjA8CUJgbUdzOPcEAM9WRb2fu0QSq1WjFcnV5PgNpBe1X09/Xk1qdiRNilx6u3Yb/IDA1NnbAzY0EqibCZhQBus5SG3fjCUvbbVAdc4lPGWQJCbUX56CRDmtvd4EOicoLjNc5hFgCCGEisxNiiNihZtWK8aRoNc/IU4jC2zxgKZQ2CVj1Q/tpxMQhDbLrrAtBGZOaLON0PML0lJyLK3vp3dP2tKIaWdg7vXjJm7WdoajtNXCH0TyKLUJWmpoayRrM8v2xG4Qk+2OiDrZ60FL/I8bnP3RpfefGcfN/vGPsYETqT5yFsfZ5G3U9GnOFrg9k9DjsBShNZsh/r0V8y3ocjbPYPoI=
+    file:
+      - gingerspec-starter/target/gingerspec-starter-$project_version.jar
+    on:
+      repo: PrivaliaTech/gingerspec-starter
+      branch: master
+      branch: /^deploy.*$/
+    name: $project_version
+  - provider: script
+      script: mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
+      on:
+        branch: master
+        branch: /^deploy.*$/
 cache:
     directories:
         - ~/.m2/repository
