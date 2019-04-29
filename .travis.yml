@@ -29,6 +29,8 @@ deploy:
   on:
     repo: PrivaliaTech/gingerspec-starter
     branch: master
+    branch: /^deploy.*$/
+
   name: $project_version
 
 cache:
