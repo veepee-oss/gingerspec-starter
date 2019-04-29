@@ -11,6 +11,8 @@ install:
 ## Build and release to maven central
 script:
     mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
+    on:
+      branch: master
 
 
 ## Get the project version
