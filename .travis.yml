@@ -11,9 +11,7 @@ install:
 ## Build and release to maven central
 script:
     mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
-    on:
-      branch: master
-      branch: /^release-.*$/
+    if: branch = master
 
 
 ## Get the project version
@@ -32,7 +30,6 @@ deploy:
   on:
     repo: PrivaliaTech/gingerspec-starter
     branch: master
-    branch: /^release.*$/
   name: $project_version
 
 
