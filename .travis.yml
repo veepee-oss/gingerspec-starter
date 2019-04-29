@@ -11,6 +11,8 @@ install:
 ## Build and release to maven central
 script:
     mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
+    if: branch = master, /^release-.*$/
+
 
 ## Get the project version
 before_deploy:
@@ -27,6 +29,7 @@ deploy:
     - gingerspec-starter/target/gingerspec-starter-$project_version.jar
   on:
     repo: PrivaliaTech/gingerspec-starter
+    branch: master, /^release-.*$/
   name: $project_version
 
 
