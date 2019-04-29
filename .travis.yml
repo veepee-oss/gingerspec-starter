@@ -30,7 +30,6 @@ deploy:
     repo: PrivaliaTech/gingerspec-starter
     branch: master
   name: $project_version
-  branch: master
 
 cache:
     directories:
