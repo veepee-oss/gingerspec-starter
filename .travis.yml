@@ -28,13 +28,11 @@ deploy:
       - gingerspec-starter/target/gingerspec-starter-$project_version.jar
     on:
       repo: PrivaliaTech/gingerspec-starter
-      branch: master
       branch: /^release.*$/
     name: $project_version
   - provider: script
     script: mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
     on:
-      branch: master
       branch: /^release.*$/
 cache:
     directories:
