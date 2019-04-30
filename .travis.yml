@@ -24,13 +24,12 @@ deploy:
       - gingerspec-starter/target/gingerspec-starter-$project_version.jar
     on:
       repo: PrivaliaTech/gingerspec-starter
-      all_branches: true
-      condition: $TRAVIS_BRANCH =~ ^release$
+      branch: /^release$/
     name: $project_version
   - provider: script
     script: mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
     on:
-      branch: ^release
+      branch: /^release$/
 cache:
     directories:
         - ~/.m2/repository
