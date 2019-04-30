@@ -32,7 +32,7 @@ deploy:
       branch: /^deploy.*$/
     name: $project_version
   - provider: script
-      script: mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
+    script: mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
     on:
       branch: master
       branch: /^deploy.*$/
