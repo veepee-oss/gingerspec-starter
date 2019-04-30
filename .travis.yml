@@ -29,13 +29,13 @@ deploy:
     on:
       repo: PrivaliaTech/gingerspec-starter
       branch: master
-      branch: /^deploy.*$/
+      branch: /^release.*$/
     name: $project_version
   - provider: script
     script: mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
     on:
       branch: master
-      branch: /^deploy.*$/
+      branch: /^release.*$/
 cache:
     directories:
         - ~/.m2/repository
