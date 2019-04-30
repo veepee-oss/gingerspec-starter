@@ -36,4 +36,4 @@ stages:
   - install
   ## require the branch name to start with release
   - name: deploy
-    if: branch = /^release/
+    if: branch =~ ^release$
