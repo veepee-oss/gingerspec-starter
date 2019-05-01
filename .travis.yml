@@ -15,7 +15,7 @@ before_deploy:
     - export project_version=$(mvn help:evaluate -N -Dexpression=project.version|grep -v '\[')
 
 
-### Create release in GitHub
+### Create release in GitHub only on builds from branches starting with release/
 deploy:
   - provider: releases
     api_key:
@@ -24,9 +24,14 @@ deploy:
       - gingerspec-starter/target/gingerspec-starter-$project_version.jar
     on:
       repo: PrivaliaTech/gingerspec-starter
+      all_branches: true
+      condition: ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} =~ ^release\/.*$
     name: $project_version
   - provider: script
     script: mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
+    on:
+      all_branches: true
+      condition: ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} =~ ^release\/.*$
 cache:
     directories:
         - ~/.m2/repository
