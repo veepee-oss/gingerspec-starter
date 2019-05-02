@@ -28,6 +28,7 @@ deploy:
       all_branches: true
       condition: ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} =~ ^release\/.*$
     name: $project_version
+    overwrite: true
   - provider: script
     script: mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
     on:
