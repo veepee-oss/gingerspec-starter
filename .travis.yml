@@ -6,7 +6,7 @@ before_install:
     - echo $GPG_OWNERTRUST | base64 --decode | $GPG_EXECUTABLE --import-ownertrust
 
 install:
-    mvn --settings cd/mvnsettings.xml install -DskipTests=true -Dgpg.skip -Dmaven.javadoc.skip=true -B -V
+    mvn --settings cd/mvnsettings.xml install -Dmaven.test.skip=true
 
 
 ## Get the project version
@@ -30,7 +30,7 @@ deploy:
     name: $project_version
     overwrite: true
   - provider: script
-    script: mvn clean deploy --settings cd/mvnsettings.xml -DskipTests=true -B -U -Prelease
+    script: mvn clean deploy --settings cd/mvnsettings.xml -P sign,build-extras -Dmaven.test.skip=true
     on:
       tags: false
       all_branches: true
