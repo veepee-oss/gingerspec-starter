@@ -18,49 +18,13 @@ $ mvn archetype:generate -B -DarchetypeArtifactId=maven-archetype-archetype -Dgr
 
 ## Using this archetype
 
-Before you can create projects using this archetype, you will have to modify your settins.xml file in ~/.m2/ in order to indicate maven where to look for this archetype. 
+To bootstrap a new template, execute the following command in your terminal:
 
-Copy the following configuration in your settings.xml file (~/.m2/settings.xml)
-
-    <?xml version="1.0" encoding="UTF-8"?>
-    <settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-        <profiles>
-            <profile>
-                <repositories>
-                    <repository>
-                        <snapshots>
-                            <enabled>false</enabled>
-                        </snapshots>
-                        <id>releases</id>
-                        <name>libs-release</name>
-                        <url>http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2</url>
-                    </repository>
-                    <repository>
-                        <snapshots/>
-                        <id>snapshots</id>
-                        <name>libs-snapshot</name>
-                        <url>http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2</url>
-                    </repository>
-                </repositories>
-                <id>artifactory</id>
-            </profile>
-        </profiles>
-        <activeProfiles>
-            <activeProfile>artifactory</activeProfile>
-        </activeProfiles>
-    </settings>
+    $ mvn -U archetype:generate -DarchetypeGroupId=com.github.privaliatech -DarchetypeArtifactId=gingerspec-starter
 
 
-
-Now, you can execute from your computer:
-
-    $ mvn -U archetype:generate -DarchetypeGroupId=com.privalia -DarchetypeArtifactId=automation-archetype -DarchetypeVersion=0.0.1-SNAPSHOT
-
-
-> About the version number
-> In this example, we are using the version 0.0.1-SNAPSHOT, but you can take a look in
-> http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2/com/privalia/automation-archetype/
-> To check all the different versions. Using -DarchetypeVersion=LATEST will automatically download the lastest snapshopt, or you can also use -DarchetypeVersion=RELEASE
+> About the version number: <br>
+> you can also use -DarchetypeVersion=RELEASE to pull an specific release number
 
 
 Follow the on-screen instructions and provide the properties **artifactId**, **groupId** , **version** and  **package**
@@ -68,17 +32,10 @@ Follow the on-screen instructions and provide the properties **artifactId**, **g
 
 ## Using this archetype locally (optional)
 
-If for any reason you are unable to access this archetype using the internal privalia's artifactory (or you want to make changes to this archetype configuration), you can download the project and build it in your local machine:
-
-> Currently, the versioning of artifacts is being handled directly
-> by the pipeline, so you will find a generic <version>##VERSION##</version> tag
-> in the project's pom file. If you are going to make tests locally, you can change
-> this value by a more apropiate version number. For this example, lets say 1.0-SNAPSHOT.
-> The pipeline will require this tag in the pom file of the master branch when generating
-> SNAPSHOTS or RELEASES, so remember to return it to ##VERSION##
+If for any reason you are unable to access this archetype (or you want to make changes to this archetype configuration), you can download the project and build it in your local machine:
 
 ``` bash
-$ git clone git@gitlab.privalia.pin:som-qa/automation-archetype.git
+$ git clone git@github.com:PrivaliaTech/gingerspec-starter.git
 $ cd automation-archetype
 $ mvn install
 $ mvn archetype:update-local-catalog
@@ -86,7 +43,7 @@ $ mvn archetype:crawl
 ```
 This will update the local archetype repository (~/.m2/repository/archetype-catalog.xml) with this new archetype. You can now execute the following command
 
-    $ mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=com.privalia -DarchetypeArtifactId=automation-archetype -DarchetypeVersion=1.0-SNAPSHOT
+    $ mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=com.github.privaliatech -DarchetypeArtifactId=gingerspec-starter -DarchetypeVersion=1.0-SNAPSHOT
 
 Follow the on-screen instructions and provide the properties **artifactId**, **groupId** , **version** and  **package**
 
