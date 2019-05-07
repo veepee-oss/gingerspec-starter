@@ -15,7 +15,7 @@ import ${groupId}.${artifactId}.utils.BaseTest;
         {
                 "src/test/resources/features/$package/cucumber_backend_test.feature"
         },
-        glue = "classpath:${groupId}.${artifactId}.${package}.specs")
+        glue = "classpath:${groupId}.${artifactId}.specs")
 public class CucumberBackendIT extends BaseTest {
 
     @Test(enabled = true)

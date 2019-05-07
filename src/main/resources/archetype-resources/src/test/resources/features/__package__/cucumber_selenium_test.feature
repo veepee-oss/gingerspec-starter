@@ -1,5 +1,5 @@
 @web
-Feature: Testing boit-uat20 login and basic layout
+Feature: Testing basic functionality of a web page
 
     This feature shows an example of how to test a web application using Selenium. Please, notice that
     the @web annotation in the beginning of the feature is NECESSARY since it indicates the library to
@@ -13,48 +13,32 @@ Feature: Testing boit-uat20 login and basic layout
     Head over https://confluence.vptech.eu/pages/viewpage.action?pageId=5442497 to find more information
     on how to start your own Selenium Grid service to execute this test
 
-    Scenario: Verify that the logistic orders page displays correctly 11 clickable buttons in the top navigation bar
-        Given My app is running in 'boit-uat24.privalia-test.com:80'
-        And I browse to '/login'
-        When '1' elements exists with 'xpath://*[@id="aclusr_username"]'
-        Then I type 'root' on the element on index '0'
-        When '1' elements exists with 'xpath://*[@id="aclusr_password"]'
-        Then I type '1111' on the element on index '0'
-        And '1' elements exists with 'xpath://*[@id="submit"]'
-        And I click on the element on index '0'
-        Given I wait '1' seconds
-        When I browse to '/logisticorders/index'
-        Then I check every '1' seconds for at least '10' seconds until '11' elements exists with 'xpath://*[contains(@class, 'dir')]' and is 'clickable'
-        And I browse to '/login/logout'
-        And I wait '2' seconds
+    Scenario: Verify that there are two main sections "Interactions" and "Widgets"
+        Given My app is running in 'demoqa.com:80'
+        And I browse to '/'
+        When '2' elements exists with 'class:widget-title'
+        And I wait '1' seconds
 
-
-    Scenario: Verify that a warning alert appears when clicking on the excel icon without campaigns listed and that the alert can be
-    dismissed or accepted
-        Given My app is running in 'boit-uat24.privalia-test.com:80'
-        And I browse to '/login'
-        When '1' elements exists with 'xpath://*[@id="aclusr_username"]'
-        Then I type 'root' on the element on index '0'
-        When '1' elements exists with 'xpath://*[@id="aclusr_password"]'
-        Then I type '1111' on the element on index '0'
-        And '1' elements exists with 'xpath://*[@id="submit"]'
+    Scenario: Verify button and checkbox with xpath and click on it
+        Given My app is running in 'demoqa.com:80'
+        And I browse to '/button'
+        When '1' elements exists with 'xpath://*[@id="content"]/div[2]/div/input'
         And I click on the element on index '0'
-        Given I wait '1' seconds
-        When I browse to '/logisticorders/index'
-        Then I check every '1' seconds for at least '10' seconds until '1' elements exists with 'xpath://*[@id="pager2"]/table/tbody/tr/td[2]' and is 'clickable'
+        And I browse to '/checkboxradio'
+        When '1' elements exists with 'xpath://*[@id="content"]/div[2]/div/fieldset[1]/label[1]'
         And I click on the element on index '0'
-        Then I check every '1' seconds for at least '10' seconds until an alert appears
-        Then I dismiss the alert
-        And I wait '2' seconds
-        And I click on the element on index '0'
-        Then I check every '1' seconds for at least '10' seconds until an alert appears
-        And I accept the alert
-        And I browse to '/login/logout'
-        And I wait '2' seconds
+        And I wait '1' seconds
 
+    Scenario: Write text on a text input
+        Given My app is running in 'demoqa.com:80'
+        And I browse to '/autocomplete'
+        When '1' elements exists with 'id:tags'
+        Then I type 'Java' on the element on index '0'
+        And I wait '1' seconds
 
-    Scenario: Using a custom step (check CustomStepDefinition class})
-        Given My app is running in 'boit-uat24.privalia-test.com:80'
-        And I browse to '/login'
+    Scenario: Using a custom step (check CustomStepDefinition class)
+        Given My app is running in 'demoqa.com:80'
+        And I browse to '/'
         Given I wait '1' seconds
         Then I want to go to disneyland
+        Given I wait '1' seconds
