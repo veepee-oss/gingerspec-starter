@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
         {
                 "src/test/resources/features/$package/cucumber_selenium_test.feature"
         },
-        glue = "classpath:$groupId.$artifactId.specs")
+        glue = "classpath:${groupId}.${artifactId}.${package}.specs")
 public class CucumberSeleniumIT extends BaseTest {
 
     @Factory(dataProviderClass = BrowsersDataProvider.class, dataProvider = "availableUniqueBrowsers")
