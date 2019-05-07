@@ -95,26 +95,46 @@ Properties are changed in the specified places
 
 Directories/packages names are changed accordingly, from this:
 
-    │           │           │   └── com
-    │           │           │       └── privalia
-    │           │           │           ├── __artifactId__
-    │           │           │           │   ├── __package__
-    │           │           │           │   │   ├── CucumberBackendIT.java
-    │           │           │           │   │   ├── CucumberRestIT.java
-    │           │           │           │   │   └── CucumberSeleniumIT.java
-    │           │           │           │   └── specs
-    │           │           │           │       └── CustomStepsDefinition.java
+``` bash
+└── __groupId__
+    └── __artifactId__
+        ├── __package__
+        │   ├── CucumberBackendIT.java
+        │   ├── CucumberRestIT.java
+        │   └── CucumberSeleniumIT.java
+        ├── specs
+        │   └── CustomStepsDefinition.java
+        └── utils
+            ├── BaseTest.java
+            └── CukesHooks.java
+``` 
+
+
 
 To this
 
-        ├── com
-        │   └── privalia
-        │       ├── myproject
-        │       │   ├── mypackage
-        │       │   │   ├── CucumberBackendIT.class
-        │       │   │   ├── CucumberRestIT.class
-        │       │   │   └── CucumberSeleniumIT.class
-        │       │   └── specs
-        │       │       └── CustomStepsDefinition.class
-
+``` bash
+└── com.privalia
+    └── myproject
+        ├── mypackage
+        │   ├── CucumberBackendIT.java
+        │   ├── CucumberRestIT.java
+        │   └── CucumberSeleniumIT.java
+        ├── specs
+        │   └── CustomStepsDefinition.java
+        └── utils
+            ├── BaseTest.java
+            └── CukesHooks.java
+ ``` 
+ 
+ 
+ ## Contributing Members to GingerSpec starter
+ 
+ **QA Team Lead: [Oleksandr Tarasyuk](https://github.com/alejandro2003) (@oleksandr.tarasyuk)**
+ 
+ #### Other Members:
+ 
+ |Name     |  Slack Handle   | 
+ |---------|-----------------|
+ |[Jose Fernandez Duque](https://github.com/josefd8)| @josefd8        |
  
