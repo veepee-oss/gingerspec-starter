@@ -40,7 +40,7 @@
         <fileSet filtered="true" encoding="UTF-8">
             <directory>src/test/java/__groupId__/__artifactId__/utils</directory>
             <includes>
-                <include>*.java</include>
+                <include>BaseTest.java</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
