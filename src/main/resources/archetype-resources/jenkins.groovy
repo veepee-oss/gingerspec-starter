@@ -96,6 +96,7 @@ node('master') {
          * BROWSER_NAME (Stores the randomly generated browser name)
          * */
         this.addStamenet("mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberRestIT")
+        this.addStamenet("mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberBackendIT")
         this.addStamenet("mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberSeleniumIT -DSELENIUM_GRID=${SELENIUM_GRID_HOST}:${SELENIUM_GRID_PORT} -DFORCE_BROWSER=${BROWSER_TYPE}_${BROWSER_NAME}")
 
         image_maven.pull()
@@ -113,10 +114,6 @@ node('master') {
             if ("${SELENIUM_NODE}" == "true") {
                 containerService.stop()
             }
-
-            /** Gherkin reporter plugin is not correcting adding a tag in the json report to show scenarios */
-            sh 'sed -i \'/"keyword": "Scenario",/a "type": "Scenario",\' target/*.json'
-            sh 'sed -i \'/"keyword": "Scenario Outline",/a "type": "Scenario",\' target/*.json'
 
             /** Publish the generated cucumber reports */
             cucumber 'target/*.json'
