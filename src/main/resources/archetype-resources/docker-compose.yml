@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  selenium-grid:
+    image: 'privaliatech/privalia-selenium-hub:3.9.1'
+    ports:
+      - "4444:4444"
+  selenium-chrome:
+    image: 'privaliatech/privalia-selenium-chrome:64'
+    depends_on:
+      - selenium-grid
+    environment:
+      ID: 'chrome'
+      SELENIUM_GRID: 'selenium-grid:4444'
+    ports:
+      - "5900:5900"
+    volumes:
+      - $PWD:/home/shared
