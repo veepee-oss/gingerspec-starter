@@ -1,8 +1,8 @@
 GingerSpec starter
 =============================
 
-[![Build Status](https://travis-ci.com/PrivaliaTech/gingerspec-starter.svg)](https://travis-ci.org/rest-assured/rest-assured)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.rest-assured/rest-assured)
+[![Build Status](https://travis-ci.com/PrivaliaTech/gingerspec-starter.svg)](https://travis-ci.org/PrivaliaTech/gingerspec-starter)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter)
 
 
 A maven archetype for creating new automation projects.

@@ -10,8 +10,12 @@ Feature: Testing basic functionality of a web page
 
     mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberSeleniumIT -DSELENIUM_GRID=127.0.0.1:4444
 
-    Head over https://confluence.vptech.eu/pages/viewpage.action?pageId=5442497 to find more information
-    on how to start your own Selenium Grid service to execute this test
+    For your convenience, there’s a docker-compose file that automatically starts a selenium grid service with
+    one chrome browser node. Check the docker-compose.yml file in the root folder of the project for further
+    instructions
+
+    You can check a more complete list of steps and examples at:
+    https://confluence.vptech.eu/pages/viewpage.action?pageId=5442503
 
     Scenario: Verify that there are two main sections "Interactions" and "Widgets"
         Given My app is running in 'demoqa.com:80'
