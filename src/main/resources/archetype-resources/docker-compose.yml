@@ -1,3 +1,28 @@
+######################################################################################################
+# This is a docker-compose file that starts the necessary containers for testing selenium features
+#
+# In order to use it, go to the root folder of the project and execute
+#
+# $ docker-compose up -d
+#
+# All services will be available via localhost, and all will have port binding to a local port in the
+# machine. The ports that will be used for binding are:
+#
+# * 4444 (Selenium grid)
+# * 5900 (Selenium chrome node)
+#
+# So, make sure this ports are available in the host machine. Remember to use the variable -DSELENIUM_GRID
+# variable when running your selenium tests, like this:
+#
+# $ mvn verify -Dit.test=com.package.class -DSELENIUM_GRID=localhost:4444
+#
+# If you want to see your tests running, you can connect to the chrome node using VNC (address localhost:5900
+# with password 'secret'). To terminate all services just execute:
+#
+# $ docker-compose down
+#
+######################################################################################################
+
 version: '3'
 
 services:
