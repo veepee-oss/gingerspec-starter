@@ -11,6 +11,7 @@
                 <include>CHANGELOG.md</include>
                 <include>.gitignore</include>
                 <include>jenkins.groovy</include>
+                <include>docker-compose.yml</include>
             </includes>
         </fileSet>
         <fileSet filtered="false" encoding="UTF-8">

@@ -1,8 +1,8 @@
 GingerSpec starter
 =============================
 
-[![Build Status](https://travis-ci.com/PrivaliaTech/gingerspec-starter.svg)](https://travis-ci.org/rest-assured/rest-assured)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.rest-assured/rest-assured)
+[![Build Status](https://travis-ci.com/PrivaliaTech/gingerspec-starter.svg)](https://travis-ci.org/PrivaliaTech/gingerspec-starter)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter)
 
 
 A maven archetype for creating new automation projects.
@@ -36,14 +36,14 @@ If for any reason you are unable to access this archetype (or you want to make c
 
 ``` bash
 $ git clone git@github.com:PrivaliaTech/gingerspec-starter.git
-$ cd automation-archetype
+$ cd gingerspec-starter
 $ mvn install
 $ mvn archetype:update-local-catalog
 $ mvn archetype:crawl
 ```
 This will update the local archetype repository (~/.m2/repository/archetype-catalog.xml) with this new archetype. You can now execute the following command
 
-    $ mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=com.github.privaliatech -DarchetypeArtifactId=gingerspec-starter -DarchetypeVersion=1.0-SNAPSHOT
+    $ mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=com.github.privaliatech -DarchetypeArtifactId=gingerspec-starter -DarchetypeVersion=<version-in-pom>
 
 Follow the on-screen instructions and provide the properties **artifactId**, **groupId** , **version** and  **package**
 

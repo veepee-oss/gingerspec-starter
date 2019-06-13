@@ -13,7 +13,7 @@ import ${groupId}.${artifactId}.utils.BaseTest;
  * Notice that for Selenium related runner classes, is necessary the non-default constructor
  * shown below
  */
-@CucumberOptions(features =
+@CucumberOptions(plugin = {"json:target/CucumberSeleniumIT.json"}, features =
         {
                 "src/test/resources/features/$package/cucumber_selenium_test.feature"
         },

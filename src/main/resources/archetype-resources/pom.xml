@@ -3,16 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
 
 
-  <!--
-  Consider to check more up-to-date version numbers of the parent-pom here:
-  http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2/com/privalia/parent
-
-  And for the the gingerspec library here:
-  http://artifactory.mkp.privalia.pin/artifactory/privalia-maven2/com/privalia/bdt-lib
-  -->
-
   <properties>
-    <privalia.gingerspec.version>2.0.0-RC1</privalia.gingerspec.version>
+    <privalia.gingerspec.version>2.0.0</privalia.gingerspec.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
