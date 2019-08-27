@@ -6,7 +6,7 @@ Feature: Testing backend related functionality
   Execute this test like this: mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberBackendIT
 
   You can check a more complete list of steps and examples at:
-  https://confluence.vptech.eu/pages/viewpage.action?pageId=5442503
+  https://github.com/PrivaliaTech/gingerspec/wiki/Gherkin-extended-language
 
   Scenario: Storing environmental variables in the feature
     Given I run 'ls -l' locally with exit status '0' and save the value in environment variable 'DEFEXSTAT'

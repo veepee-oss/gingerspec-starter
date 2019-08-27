@@ -1,0 +1,59 @@
+#####################################################################################
+# This is an example configuration file for the gitlab CI pipeline
+#
+# This template shows how to run the different tests that are provided as an example
+# when you first create the project.
+#
+# Use this template as an starting point for running your own tests on the gitlab
+# CI pipeline
+#
+# Happy testing!
+#####################################################################################
+
+
+# This template uses jdk11 for for running tests
+image: maven:3.6.1-jdk-11
+
+# Cache downloaded dependencies and plugins between builds.
+# To keep cache across branches add 'key: "$CI_JOB_NAME"'
+cache:
+  paths:
+    - .m2/repository
+
+
+# Use a selenium standalone node for running selenium tests
+services:
+  - name: selenium/standalone-chrome:3.141.59
+    alias: node
+
+# Cucumber JSON reports are published for each job. For tests that make use of selenium, the folder with screenshots is also published
+# Each runner class is executed in a separate job. This way, we can easily visualize and run each job individually
+# All jobs belong to the same stage: test
+CucumberBackendIT:
+  stage: test
+  script:
+    - 'mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberBackendIT'
+  artifacts:
+    paths:
+    - target/*.json
+    when: always
+
+CucumberRestIT:
+  stage: test
+  script:
+    - 'mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberRestIT'
+  artifacts:
+    paths:
+    - target/*.json
+    when: always
+
+CucumberSeleniumIT:
+  stage: test
+  script:
+    - 'mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberSeleniumIT -DSELENIUM_NODE=node:4444'
+  artifacts:
+    paths:
+    - target/executions/**
+    - target/*.json
+    when: always
+

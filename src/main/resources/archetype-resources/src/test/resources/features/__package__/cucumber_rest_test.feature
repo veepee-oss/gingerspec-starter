@@ -10,7 +10,7 @@ Feature: Testing a RestFull API
     Execute this test like this: mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberRestIT
 
     You can check a more complete list of steps and examples at:
-    https://confluence.vptech.eu/pages/viewpage.action?pageId=5442503
+    https://github.com/PrivaliaTech/gingerspec/wiki/REST-&-SSH-steps
 
     Scenario: A successful response with a valid body is returned
         Given I securely send requests to 'jsonplaceholder.typicode.com:443'
