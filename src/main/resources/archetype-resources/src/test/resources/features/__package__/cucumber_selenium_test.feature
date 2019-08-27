@@ -14,8 +14,13 @@ Feature: Testing basic functionality of a web page
     one chrome browser node. Check the docker-compose.yml file in the root folder of the project for further
     instructions
 
+    P.S. Besides a selenium grid, you can also make use of a Selenium standalone node for running selenium tests
+    (no need for a selenium grid/hub) and use the flag -DSELENIUM_NODE to indicate the address of the standalone
+    node. Please, check the documentation at:
+    https://github.com/PrivaliaTech/gingerspec/wiki/Running-Selenium-tests
+
     You can check a more complete list of steps and examples at:
-    https://confluence.vptech.eu/pages/viewpage.action?pageId=5442503
+    https://github.com/PrivaliaTech/gingerspec/wiki/Selenium-steps
 
     Scenario: Verify that there are two main sections "Interactions" and "Widgets"
         Given My app is running in 'demoqa.com:80'
