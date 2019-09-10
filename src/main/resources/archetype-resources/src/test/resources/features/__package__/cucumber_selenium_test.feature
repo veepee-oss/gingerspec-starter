@@ -28,15 +28,8 @@ Feature: Testing basic functionality of a web page
         When '2' elements exists with 'class:widget-title'
         And I wait '1' seconds
 
-    Scenario: Verify button and checkbox with xpath and click on it
-        Given My app is running in 'demoqa.com:80'
-        And I browse to '/button'
-        When '1' elements exists with 'xpath://*[@id="content"]/div[2]/div/input'
-        And I click on the element on index '0'
-        And I browse to '/checkboxradio'
-        When '1' elements exists with 'xpath://*[@id="content"]/div[2]/div/fieldset[1]/label[1]'
-        And I click on the element on index '0'
-        And I wait '1' seconds
+    Scenario: This is the same scenario as above, but in one line, using custom steps
+        Given I verify the Interactions and Widgets sections are present
 
     Scenario: Write text on a text input
         Given My app is running in 'demoqa.com:80'
@@ -44,10 +37,3 @@ Feature: Testing basic functionality of a web page
         When '1' elements exists with 'id:tags'
         Then I type 'Java' on the element on index '0'
         And I wait '1' seconds
-
-    Scenario: Using a custom step (check CustomStepDefinition class)
-        Given My app is running in 'demoqa.com:80'
-        And I browse to '/'
-        Given I wait '1' seconds
-        Then I want to go to disneyland
-        Given I wait '1' seconds
