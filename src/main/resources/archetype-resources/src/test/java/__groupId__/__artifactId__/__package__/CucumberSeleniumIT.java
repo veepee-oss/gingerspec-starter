@@ -14,7 +14,7 @@ import ${groupId}.${artifactId}.utils.BaseTest;
  * shown below
  */
 @CucumberOptions(plugin = {
-                "json:target/CucumberSeleniumIT.json"
+                "json:target/CucumberSeleniumIT.json",
                 "html:target/CucumberSeleniumIT"
         }, features =
         {

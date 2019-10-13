@@ -9,7 +9,7 @@ import ${groupId}.${artifactId}.utils.BaseTest;
  * Glue files can be specified in the {@link CucumberOptions} annotation
  */
 @CucumberOptions(plugin = {
-                "json:target/CucumberBackendIT.json"
+                "json:target/CucumberBackendIT.json",
                 "html:target/CucumberBackendIT"
         }, features =
         {
