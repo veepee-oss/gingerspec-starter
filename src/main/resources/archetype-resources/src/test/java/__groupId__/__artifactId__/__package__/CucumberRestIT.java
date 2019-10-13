@@ -10,7 +10,7 @@ import ${groupId}.${artifactId}.utils.BaseTest;
  */
 @CucumberOptions(plugin = {
                 "json:target/CucumberRestIT.json",
-                "html:target/CucumberRestIT",
+                "html:target/CucumberRestIT"
         }, features =
         {
                 "src/test/resources/features/$package/cucumber_rest_test.feature"

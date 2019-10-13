@@ -73,7 +73,7 @@ public class CustomStepsDefinition extends BaseGSpec {
     public void iVerifyTheInteractionsAndWidgetsSectionsArePresent() throws Throwable {
         seleniumGSpec.setupApp("demoqa.com:80");
         seleniumGSpec.seleniumBrowse(null,"/");
-        seleniumGSpec.assertSeleniumNElementExists(2,"class","widget-title");
+        seleniumGSpec.assertSeleniumNElementExists("at least", 2,"class","widget-title");
         utilsGSpec.idleWait(1);
     }
 
