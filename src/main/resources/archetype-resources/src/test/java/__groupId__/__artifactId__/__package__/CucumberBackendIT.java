@@ -8,7 +8,10 @@ import ${groupId}.${artifactId}.utils.BaseTest;
  * This is an example on how to call an specific feature to be executed.
  * Glue files can be specified in the {@link CucumberOptions} annotation
  */
-@CucumberOptions(plugin = {"json:target/CucumberBackendIT.json"}, features =
+@CucumberOptions(plugin = {
+                "json:target/CucumberBackendIT.json"
+                "html:target/CucumberBackendIT"
+        }, features =
         {
                 "src/test/resources/features/$package/cucumber_backend_test.feature"
         },
