@@ -44,6 +44,8 @@
         <logger name="com.privalia.tests.utils" level="${sys:logLevel}" additivity="false">
             <appender-ref ref="Hooks"/>
         </logger>
+        <logger name="io.github.bonigarcia" level="WARN" />
+        <logger name="org.apache.http" level="ERROR" />
 
         <!--<logger name="com.privalia.som.bo.po.POTestsIT" level="OFF"/>-->
     </Loggers>
