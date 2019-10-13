@@ -7,7 +7,7 @@ Feature: Testing basic functionality of a web page
 
     You can run this feature using the following command:
 
-    mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberSeleniumIT -DSELENIUM_GRID=127.0.0.1:4444
+    mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberSeleniumIT
 
     P.S. Besides using your local browser, you can specify a selenium grid and even a Selenium standalone node
     for running selenium tests. For more information about this, check the wiki of gingerspec at:
