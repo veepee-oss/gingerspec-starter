@@ -5,21 +5,15 @@ Feature: Testing basic functionality of a web page
     the @web annotation in the beginning of the feature is NECESSARY since it indicates the library to
     bootstrap some necessary dependencies. Failing to do so will make your feature fail.
 
-    Mind that for any Selenium related feature (like this one), is NECESSARY to indicate the address of
-    the Selenium Grid service to execute it, in this way:
+    You can run this feature using the following command:
 
     mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberSeleniumIT -DSELENIUM_GRID=127.0.0.1:4444
 
-    For your convenience, there’s a docker-compose file that automatically starts a selenium grid service with
-    one chrome browser node. Check the docker-compose.yml file in the root folder of the project for further
-    instructions
-
-    P.S. Besides a selenium grid, you can also make use of a Selenium standalone node for running selenium tests
-    (no need for a selenium grid/hub) and use the flag -DSELENIUM_NODE to indicate the address of the standalone
-    node. Please, check the documentation at:
+    P.S. Besides using your local browser, you can specify a selenium grid and even a Selenium standalone node
+    for running selenium tests. For more information about this, check the wiki of gingerspec at:
     https://github.com/PrivaliaTech/gingerspec/wiki/Running-Selenium-tests
 
-    You can check a more complete list of steps and examples at:
+    You can check a more complete list of selenium steps and examples at:
     https://github.com/PrivaliaTech/gingerspec/wiki/Selenium-steps
 
     Scenario: Verify that there are two main sections "Interactions" and "Widgets"
