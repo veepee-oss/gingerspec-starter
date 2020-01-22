@@ -33,6 +33,7 @@ CucumberBackendIT:
   stage: test
   script:
     - 'mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberBackendIT'
+  allow_failure: true
   artifacts:
     paths:
     - target/*.json
@@ -42,6 +43,7 @@ CucumberRestIT:
   stage: test
   script:
     - 'mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberRestIT'
+  allow_failure: true
   artifacts:
     paths:
     - target/*.json
@@ -51,9 +53,25 @@ CucumberSeleniumIT:
   stage: test
   script:
     - 'mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberSeleniumIT -DSELENIUM_NODE=node:4444'
+  allow_failure: true
   artifacts:
     paths:
     - target/executions/**
     - target/*.json
     when: always
+
+
+# At the end of the mvn verify phase, a cucumber json report is generated for each feature. This file serves as the seed to create an
+# HTML report in target/cucumber-html-reports. this job takes all json files found in target/ to generate an HTML cucumber report which
+# is then published in Github pages. You need to activate the 'Github pages' functionality in your repo for this to work
+pages:
+  stage: deploy
+  script:
+    - mvn verify -Dmaven.test.skip=true
+    - mkdir -p ./public
+    - cp -r target/cucumber-html-reports/* public/
+    - cp public/overview-features.html public/index.html
+  artifacts:
+    paths:
+      - public
 
