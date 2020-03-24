@@ -4,7 +4,7 @@
 
 
   <properties>
-    <privalia.gingerspec.version>2.0.4</privalia.gingerspec.version>
+    <privalia.gingerspec.version>2.1.0</privalia.gingerspec.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
