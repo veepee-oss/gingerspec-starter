@@ -52,9 +52,4 @@ Give an example
   
 This module depends on the GingerSpec framework (QA testing library), where common logic and steps are implemented. 
   
-Check more information about the GingerSpec framework [here](https://confluence.vptech.eu/pages/viewpage.action?pageId=5442509)  
-
-List of all the steps in the library [here
-](https://confluence.vptech.eu/pages/viewpage.action?pageId=5442503)
-
-Follow the instructions [here](https://confluence.vptech.eu/pages/viewpage.action?pageId=5442497) to set up your own local Selenium Grid to use in your tests if necessary
+Check more information about the GingerSpec framework [here](https://github.com/PrivaliaTech/gingerspec/wiki)  
