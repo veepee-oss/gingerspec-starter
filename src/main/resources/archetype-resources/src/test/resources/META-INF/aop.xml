@@ -5,8 +5,6 @@
         <aspect name="com.privalia.qa.aspects.LogTagAspect" />
         <aspect name="com.privalia.qa.aspects.RunOnTagAspect" />
         <aspect name="com.privalia.qa.aspects.IgnoreTagAspect" />
-        <aspect name="com.privalia.qa.aspects.AssertJAspect" />
-        <aspect name="com.privalia.qa.aspects.SeleniumAspect" />
         <aspect name="com.privalia.qa.aspects.BrowsersDataProviderAspect" />
         <aspect name="com.privalia.qa.aspects.ReplacementAspect" />
     </aspects>
