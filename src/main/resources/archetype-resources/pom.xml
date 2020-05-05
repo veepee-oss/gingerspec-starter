@@ -4,7 +4,7 @@
 
 
   <properties>
-    <privalia.gingerspec.version>2.1.0</privalia.gingerspec.version>
+    <privalia.gingerspec.version>2.1.2</privalia.gingerspec.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
@@ -56,7 +56,7 @@
               <value>com.privalia.qa.utils.JaCoCoClient</value>
             </property>
           </properties>
-          <argLine>-Xms512m -Xmx1536m
+          <argLine>
             -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.8.8/aspectjweaver-1.8.8.jar
           </argLine>
           <useSystemClassloader>true</useSystemClassloader>
@@ -89,30 +89,11 @@
   </build>
 
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/com.github.privaliatech/gingerspec -->
     <dependency>
       <groupId>com.github.privaliatech</groupId>
       <artifactId>gingerspec</artifactId>
       <version>${privalia.gingerspec.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-slf4j-impl</artifactId>
-      <version>2.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
-      <version>2.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-1.2-api</artifactId>
-      <version>2.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <version>6.14.3</version>
     </dependency>
   </dependencies>
 
