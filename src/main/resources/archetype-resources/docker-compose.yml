@@ -1,5 +1,6 @@
 ######################################################################################################
-# This is a docker-compose file that starts the necessary containers for testing selenium features
+# This is a docker-compose file that starts the necessary containers for testing selenium features using
+# selenium-grid
 #
 # In order to use it, go to the root folder of the project and execute
 #
