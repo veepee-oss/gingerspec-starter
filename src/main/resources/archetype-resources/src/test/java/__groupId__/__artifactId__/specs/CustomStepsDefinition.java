@@ -69,12 +69,15 @@ public class CustomStepsDefinition extends BaseGSpec {
      *
      * @throws Throwable    Throwable
      */
-    @Given("^I verify the Interactions and Widgets sections are present$")
+    @Given("^Fill the form and click the submit button$")
     public void iVerifyTheInteractionsAndWidgetsSectionsArePresent() throws Throwable {
-        seleniumGSpec.setupApp("demoqa.com:80");
-        seleniumGSpec.seleniumBrowse(null,"/");
-        seleniumGSpec.assertSeleniumNElementExists("at least", 2,"class","widget-title");
-        utilsGSpec.idleWait(1);
+        seleniumGSpec.iGoToUrl("http://demoqa.com/text-box");
+        seleniumGSpec.seleniumTypeByLocator("John", "id", "userName", null);
+        seleniumGSpec.seleniumTypeByLocator("john.smith@email.com", "id", "userEmail", null);
+        seleniumGSpec.seleniumTypeByLocator("123 fake address", "id", "currentAddress", null);
+        seleniumGSpec.scrollUntilElementVisibleByLocator("down","id","submit",null);
+        seleniumGSpec.seleniumClickByLocator("id","submit",null);
+        seleniumGSpec.assertSeleniumNElementExists(" at least",1,"id","output");
     }
 
     /**
