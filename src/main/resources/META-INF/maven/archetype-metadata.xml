@@ -13,6 +13,7 @@
                 <include>jenkins.groovy</include>
                 <include>docker-compose.yml</include>
                 <include>.gitlab-ci.yml</include>
+                <include>Locators-cheatsheet.pdf</include>
             </includes>
         </fileSet>
         <fileSet filtered="false" encoding="UTF-8">

@@ -29,7 +29,7 @@ mvn verify
 
 To run a specific integration tests:
 ```
-mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberSeleniumIT
+mvn verify -Dit.test=com.package.class
 ```
 
 To run all integration tests but filter scenarios with by tag:
