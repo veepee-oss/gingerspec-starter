@@ -69,7 +69,8 @@ public class CustomStepsDefinition extends BaseGSpec {
      * To help you with this, execute your tests with -DSHOW_STACK_INFO. This will provide you with information
      * about what functions of gingerspec are being called and with what arguments
      *
-     * Check all the available methods/steps in the corresponding javadoc class
+     * Check all the available methods in the corresponding javadoc class. Notice that
+     * all methods have a corresponding gherkin step:
      * https://privaliatech.github.io/gingerspec/com/privalia/qa/specs/SeleniumGSpec.html
      *
      * @throws Throwable    Throwable
@@ -84,6 +85,37 @@ public class CustomStepsDefinition extends BaseGSpec {
         seleniumGSpec.seleniumClickByLocator("id","submit",null);
         seleniumGSpec.assertSeleniumNElementExists(" at least",1,"id","output");
     }
+
+
+    /**
+     * This is an example of a custom selenium step, created by directly accessing the selenium
+     * driver.
+     *
+     * Using the provided gingerspec functions could be a convenient way of creating your own steps,
+     * however, for creating more complex logic, you can have access to the selenium driver like
+     * shown in the following example
+     *
+     * In the case of selenium, just by adding "@web" to your scenarios is enough to indicate gingerspec
+     * to bootstrap the selenium driver, no further configuration is needed from you
+     *
+     * @param name  Name to enter in the form
+     */
+    @Given("I type the name {string} in the form and click submit")
+    public void iTypeTheNameInTheForm(String name) {
+
+        /**
+         * Get access to the selenium driver instance in the following way
+         */
+        WebDriver driver = this.commonspec.getDriver();
+
+        /**
+         * Use the driver as you would normally use in selenium
+         */
+        driver.get("http://demoqa.com/text-box");
+        driver.findElement(By.id("userName")).sendKeys(name);
+        driver.findElement(By.id("submit")).click();
+    }
+
 
     /**
      * This is an example of a custom step. You can merge several gingerspec steps into a

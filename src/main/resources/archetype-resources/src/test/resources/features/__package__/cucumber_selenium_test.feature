@@ -28,7 +28,7 @@ Feature: Testing basic functionality of a web page
         And I click on the element with 'id:submit'
         Then at least '1' elements exists with 'id:output'
 
-    Scenario: This is the same scenario as above, but in one line, using custom steps
+    Scenario: This is the same scenario as above, but in one line, using gingerspec functions
         Given Fill the form and click the submit button
 
     Scenario: Write text on a text input
@@ -42,3 +42,6 @@ Feature: Testing basic functionality of a web page
         And I double click on the element with 'id:doubleClickBtn'
         And I right click on the element with 'id:rightClickBtn'
         And I click on the element with 'xpath://button[.='Click Me']'
+
+    Scenario: This is another example, accessing directly selenium driver
+        Given I type the name 'John Smith' in the form and click submit
