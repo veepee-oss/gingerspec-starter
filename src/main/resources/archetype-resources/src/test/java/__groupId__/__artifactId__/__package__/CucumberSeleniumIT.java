@@ -11,7 +11,7 @@ import ${groupId}.${artifactId}.utils.BaseTest;
  * Glue files can be specified in the {@link CucumberOptions} annotation
  *
  * Notice that this class contains an special constructor. This constructor
- * is necesary if you want to execute your selenium features against a selenium
+ * is necessary if you want to execute your selenium features against a selenium
  * Gird/Node. For more information on how to do this, check the instructions here:
  * https://github.com/PrivaliaTech/gingerspec/wiki/Running-Selenium-tests
  *

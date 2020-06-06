@@ -3,6 +3,8 @@ package ${groupId}.${artifactId}.specs;
 import com.privalia.qa.specs.*;
 import com.privalia.qa.utils.ThreadProperty;
 import cucumber.api.java.en.Given;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 /**
  * Extending the {@link BaseGSpec} class from the gingerspec allow us to
