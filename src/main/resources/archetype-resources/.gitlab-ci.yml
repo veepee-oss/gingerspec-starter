@@ -7,6 +7,8 @@
 # Use this template as an starting point for running your own tests on the gitlab
 # CI pipeline
 #
+# Check the README file to see all alternative ways of running your features.
+#
 # Happy testing!
 #####################################################################################
 
@@ -26,9 +28,10 @@ services:
   - name: selenium/standalone-chrome:3.141.59
     alias: node
 
-# Cucumber JSON reports are published for each job. For tests that make use of selenium, the folder with screenshots is also published
-# Each runner class is executed in a separate job. This way, we can easily visualize and run each job individually
-# All jobs belong to the same stage: test
+
+# In this example, each runner class is executed in a separate job inside the same stage "test". Jobs that are inside the same stage
+# are executed in parallel. This is just an example that you can use as a starting point for executing your tests in the pipeline
+# but you can organize your test in any other configuration.
 CucumberBackendIT:
   stage: test
   script:
@@ -61,9 +64,8 @@ CucumberSeleniumIT:
     expire_in: 4 weeks
 
 
-# At the end of the mvn verify phase, a cucumber json report is generated for each feature. This file serves as the seed to create an
-# HTML report in target/cucumber-html-reports. this job takes all json files found in target/ to generate an HTML cucumber report which
-# is then published in Github pages. You need to activate the 'Github pages' functionality in your repo for this to work
+# This job takes all json files found in target/ to generate an HTML cucumber report which then published
+# in Github pages. You need to activate the 'Github pages' functionality in your repo for this to work
 pages:
   stage: deploy
   when: always
