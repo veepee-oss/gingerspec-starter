@@ -19,6 +19,7 @@
             <directory></directory>
             <includes>
                 <include>README.md</include>
+                <include>Locators-cheatsheet.pdf</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">

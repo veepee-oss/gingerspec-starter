@@ -22,10 +22,24 @@ Give examples
 
 Explain how to run the automated tests for this system
 
-Example: 
-mvn verify [-D\<ENV_VAR>=\<VALUE>] [-Dit.test=\<TEST_TO_EXECUTE>|-Dgroups=\<GROUP_TO_EXECUTE>]  
+To run all integration tests
+```
+mvn verify
+```
+
+To run a specific integration tests:
+```
+mvn verify -Dit.test=com.package.class
+```
+
+To run all integration tests but filter scenarios with by tag:
+```
+mvn verify -Dcucumber.options="--tags @web"
+mvn verify -Dcucumber.options="--tags @web and @fast"
+mvn verify -Dcucumber.options="--tags @web and not @fast"
+```
   
-More information on how to run automated tests can be found [here](https://confluence.vptech.eu/pages/viewpage.action?pageId=5442509)
+More information on how to run automated tests can be found [here](https://github.com/PrivaliaTech/gingerspec/wiki/Getting-started#tests-execution)
 
 
 ### Break down into end to end tests

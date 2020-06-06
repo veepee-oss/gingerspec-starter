@@ -7,11 +7,14 @@ import ${groupId}.${artifactId}.utils.BaseTest;
 
 
 /**
- * This is an example of how to use custom glue files with custom steps for our application.
- * Step files can also extend {@link BaseTest} to fully access all its methods/properties
+ * This is an example on how to call an specific feature to be executed.
+ * Glue files can be specified in the {@link CucumberOptions} annotation
  *
- * Notice that for Selenium related runner classes, is necessary the non-default constructor
- * shown below
+ * Notice that this class contains an special constructor. This constructor
+ * is necessary if you want to execute your selenium features against a selenium
+ * Gird/Node. For more information on how to do this, check the instructions here:
+ * https://github.com/PrivaliaTech/gingerspec/wiki/Running-Selenium-tests
+ *
  */
 @CucumberOptions(plugin = {
                 "json:target/CucumberSeleniumIT.json",

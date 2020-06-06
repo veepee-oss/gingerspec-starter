@@ -7,10 +7,15 @@ Feature: Testing a RestFull API
 
     This example uses https://jsonplaceholder.typicode.com, Fake Online REST API for Testing and Prototyping
 
-    Execute this test like this: mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberRestIT
+    Execute this test like this:
+    mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberRestIT
+
+    Or run it by tag like this>
+    mvn verify -Dcucumber.options="--tags @rest"
 
     You can check a more complete list of steps and examples at:
-    https://github.com/PrivaliaTech/gingerspec/wiki/REST-&-SSH-steps
+    https://github.com/PrivaliaTech/gingerspec/wiki/REST-steps
+    https://privaliatech.github.io/gingerspec/com/privalia/qa/specs/RestSpec.html
 
     Scenario: A successful response with a valid body is returned
         Given I securely send requests to 'jsonplaceholder.typicode.com:443'
