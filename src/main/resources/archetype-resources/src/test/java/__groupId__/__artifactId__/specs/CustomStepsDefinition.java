@@ -115,6 +115,12 @@ public class CustomStepsDefinition extends BaseGSpec {
          */
         driver.get("http://demoqa.com/text-box");
         driver.findElement(By.id("userName")).sendKeys(name);
+
+        /**
+         * You can mix your own java code with gingerspec functions since they
+         * use the same driver instance internally
+         */
+        seleniumGSpec.scrollUntilElementVisibleByLocator("down","id","submit",null);
         driver.findElement(By.id("submit")).click();
     }
 
