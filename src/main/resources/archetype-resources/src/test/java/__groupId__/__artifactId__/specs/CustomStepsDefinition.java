@@ -103,7 +103,7 @@ public class CustomStepsDefinition extends BaseGSpec {
      * @param name  Name to enter in the form
      */
     @Given("I type the name {string} in the form and click submit")
-    public void iTypeTheNameInTheForm(String name) {
+    public void iTypeTheNameInTheForm(String name) throws InterruptedException {
 
         /**
          * Get access to the selenium driver instance in the following way
