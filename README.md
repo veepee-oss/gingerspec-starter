@@ -97,16 +97,15 @@ Directories/packages names are changed accordingly, from this:
 
 ``` bash
 └── __groupId__
-    └── __artifactId__
-        ├── __package__
-        │   ├── CucumberBackendIT.java
-        │   ├── CucumberRestIT.java
-        │   └── CucumberSeleniumIT.java
-        ├── specs
-        │   └── CustomStepsDefinition.java
-        └── utils
-            ├── BaseTest.java
-            └── CukesHooks.java
+     ├── __artifactId__
+     │   ├── CucumberBackendIT.java
+     │   ├── CucumberRestIT.java
+     │   └── CucumberSeleniumIT.java
+     ├── glue
+     │   └── CustomStepsDefinition.java
+     └── hooks
+         └── BaseTest.java
+            
 ``` 
 
 
@@ -115,16 +114,14 @@ To this
 
 ``` bash
 └── com.privalia
-    └── myproject
-        ├── mypackage
+        ├──myproject
         │   ├── CucumberBackendIT.java
         │   ├── CucumberRestIT.java
         │   └── CucumberSeleniumIT.java
-        ├── specs
+        ├── glue
         │   └── CustomStepsDefinition.java
-        └── utils
-            ├── BaseTest.java
-            └── CukesHooks.java
+        └── hooks
+            └── BaseTest.java
  ``` 
  
  

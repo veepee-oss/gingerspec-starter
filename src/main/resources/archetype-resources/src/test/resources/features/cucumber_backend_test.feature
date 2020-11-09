@@ -4,7 +4,7 @@ Feature: Testing backend related functionality
   related to the use of variables, JSON replacing, etc).
 
   Execute this test like this:
-  mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberBackendIT
+  mvn verify -Dit.test=${groupId}.${artifactId}.runner.CucumberBackendIT
 
   You can check a more complete list of steps and examples at:
   https://github.com/PrivaliaTech/gingerspec/wiki/Gherkin-extended-language
