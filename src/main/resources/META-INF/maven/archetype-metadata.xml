@@ -10,8 +10,6 @@
                 <include>pom.xml</include>
                 <include>CHANGELOG.md</include>
                 <include>.gitignore</include>
-                <include>jenkins.groovy</include>
-                <include>docker-compose.yml</include>
                 <include>.gitlab-ci.yml</include>
             </includes>
         </fileSet>
