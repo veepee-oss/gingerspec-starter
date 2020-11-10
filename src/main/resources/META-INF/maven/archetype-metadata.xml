@@ -3,14 +3,6 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     name= "${rootArtifactId}-parent"
 
-    <requiredProperties>
-        <requiredProperty key="version">
-            <defaultValue>1.0-SNAPSHOT</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="groupId"/>
-        <requiredProperty key="artifactId"/>
-    </requiredProperties>
-
     <fileSets>
         <fileSet filtered="true" encoding="UTF-8">
             <directory></directory>
