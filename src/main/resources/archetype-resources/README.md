@@ -29,7 +29,7 @@ mvn verify
 
 To run a specific integration tests:
 ```
-mvn verify -Dit.test=com.package.class
+mvn verify -Dit.test=com.package.runnerClass.java
 ```
 
 To run all integration tests but filter scenarios with by tag:

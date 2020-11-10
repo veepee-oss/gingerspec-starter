@@ -103,7 +103,7 @@ Directories/packages names are changed accordingly, from this:
      │   └── CucumberSeleniumIT.java
      ├── glue
      │   └── CustomStepsDefinition.java
-     └── hooks
+     └── utils
          └── BaseTest.java
             
 ``` 
@@ -120,7 +120,7 @@ To this
         │   └── CucumberSeleniumIT.java
         ├── glue
         │   └── CustomStepsDefinition.java
-        └── hooks
+        └── utils
             └── BaseTest.java
  ``` 
  
