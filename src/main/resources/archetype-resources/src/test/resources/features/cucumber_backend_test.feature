@@ -4,10 +4,10 @@ Feature: Testing backend related functionality
   related to the use of variables, JSON replacing, etc).
 
   Execute this test like this:
-  mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberBackendIT
+  mvn verify -Dit.test=${groupId}.${artifactId}.runner.CucumberBackendIT
 
   You can check a more complete list of steps and examples at:
-  https://github.com/PrivaliaTech/gingerspec/wiki/Gherkin-extended-language
+  https://github.com/vpTechOSS/gingerspec/wiki/Gherkin-extended-language
 
   Scenario: Storing environmental variables in the feature
     Given I run 'ls -l' locally with exit status '0' and save the value in environment variable 'DEFEXSTAT'

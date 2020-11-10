@@ -1,4 +1,4 @@
-package ${groupId}.${artifactId}.specs;
+package ${groupId}.${artifactId}.glue;
 
 import com.privalia.qa.specs.*;
 import com.privalia.qa.utils.ThreadProperty;
@@ -7,12 +7,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
+ * Glue code of your applications. Use this class to create your own
+ * step definitions or cucumber hooks.
+ *
  * Extending the {@link BaseGSpec} class from the gingerspec allow us to
  * define custom step definitions for our project and at the same time
  * make use of the properties of the {@link CommonG} object
  *
  * Check out the javadoc for a full description of all the methods in each class:
- * https://privaliatech.github.io/gingerspec/com/privalia/qa/specs/package-summary.html
+ * https://vptechoss.github.io/gingerspec/com/privalia/qa/specs/package-summary.html
  */
 public class CustomStepsDefinition extends BaseGSpec {
 
@@ -73,7 +76,7 @@ public class CustomStepsDefinition extends BaseGSpec {
      *
      * Check all the available methods in the corresponding javadoc class. Notice that
      * all methods have a corresponding gherkin step:
-     * https://privaliatech.github.io/gingerspec/com/privalia/qa/specs/SeleniumGSpec.html
+     * https://vptechoss.github.io/gingerspec/com/privalia/qa/specs/SeleniumGSpec.html
      *
      * @throws Throwable    Throwable
      */

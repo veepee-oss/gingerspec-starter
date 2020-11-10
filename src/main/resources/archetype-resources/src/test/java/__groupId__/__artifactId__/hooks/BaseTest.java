@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ${groupId}.${artifactId}.utils;
+package ${groupId}.${artifactId}.hooks;
 
 
 import com.privalia.qa.utils.BaseGTest;
@@ -23,6 +23,9 @@ import org.testng.annotations.*;
 
 import java.lang.reflect.Method;
 
+/**
+ * Use this class to define your own TestNG hooks
+ */
 abstract public class BaseTest extends BaseGTest {
 
     protected String browser = "";

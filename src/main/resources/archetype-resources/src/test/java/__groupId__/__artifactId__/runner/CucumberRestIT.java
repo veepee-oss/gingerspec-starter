@@ -1,7 +1,7 @@
-package ${groupId}.${artifactId}.${package};
+package ${groupId}.${artifactId}.runner;
 
 import cucumber.api.CucumberOptions;
-import ${groupId}.${artifactId}.utils.BaseTest;
+import ${groupId}.${artifactId}.hooks.BaseTest;
 
 
 /**
@@ -13,12 +13,13 @@ import ${groupId}.${artifactId}.utils.BaseTest;
  */
 @CucumberOptions(plugin = {
                 "json:target/CucumberRestIT.json",
-                "html:target/CucumberRestIT"
+                "html:target/CucumberRestIT",
+                "junit:target/CucumberRestIT.xml"
         }, features =
         {
-                "src/test/resources/features/$package/cucumber_rest_test.feature"
+                "src/test/resources/features/cucumber_rest_test.feature"
         },
-        glue = "classpath:${groupId}.${artifactId}.specs")
+        glue = "classpath:${groupId}.${artifactId}.glue")
 public class CucumberRestIT extends BaseTest {
 
 }

@@ -6,18 +6,18 @@ Feature: Testing basic functionality of a web page
     bootstrap some necessary dependencies. Failing to do so will make your feature fail.
 
     You can run this feature using the following command:
-    mvn verify -Dit.test=${groupId}.${artifactId}.${package}.CucumberSeleniumIT
+    mvn verify -Dit.test=${groupId}.${artifactId}.runner.CucumberSeleniumIT
 
     Or run it by tag like this>
     mvn verify -Dcucumber.options="--tags @web"
 
     P.S. Besides using your local browser, you can specify a selenium grid and even a Selenium standalone node
     for running selenium tests. For more information about this, check the wiki of gingerspec at:
-    https://github.com/PrivaliaTech/gingerspec/wiki/Running-Selenium-tests
+    https://github.com/vpTechOSS/gingerspec/wiki/Running-Selenium-tests
 
     You can check a more complete list of selenium steps and examples at:
-    https://github.com/PrivaliaTech/gingerspec/wiki/Selenium-steps
-    https://privaliatech.github.io/gingerspec/com/privalia/qa/specs/SeleniumGSpec.html
+    https://github.com/vpTechOSS/gingerspec/wiki/Selenium-steps
+    https://vptechoss.github.io/gingerspec/com/privalia/qa/specs/SeleniumGSpec.html
 
     Scenario: Fill the form and click the submit button
         Given I go to 'http://demoqa.com/text-box'
