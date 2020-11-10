@@ -1,7 +1,7 @@
 GingerSpec starter
 =============================
 
-[![Build Status](https://travis-ci.com/PrivaliaTech/gingerspec-starter.svg)](https://travis-ci.org/PrivaliaTech/gingerspec-starter)
+[![Build Status](https://travis-ci.com/vpTechOSS/gingerspec-starter.svg)](https://travis-ci.org/vpTechOSS/gingerspec-starter)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter)
 ![GitHub Release Date](https://img.shields.io/github/release-date/PrivaliaTech/gingerspec-starter)
 
