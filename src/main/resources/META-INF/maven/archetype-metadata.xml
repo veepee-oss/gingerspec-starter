@@ -27,7 +27,7 @@
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-            <directory>src/test/java/__groupId__/__artifactId__/runner</directory>
+            <directory>src/test/java/__groupId__/__artifactId__/runners</directory>
             <includes>
                 <include>*.java</include>
             </includes>
@@ -39,7 +39,7 @@
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-            <directory>src/test/java/__groupId__/__artifactId__/hooks</directory>
+            <directory>src/test/java/__groupId__/__artifactId__/utils</directory>
             <includes>
                 <include>BaseTest.java</include>
             </includes>

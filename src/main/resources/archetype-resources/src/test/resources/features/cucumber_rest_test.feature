@@ -8,7 +8,7 @@ Feature: Testing a RestFull API
     This example uses https://jsonplaceholder.typicode.com, Fake Online REST API for Testing and Prototyping
 
     Execute this test like this:
-    mvn verify -Dit.test=${groupId}.${artifactId}.runner.CucumberRestIT
+    mvn verify -Dit.test=${groupId}.${artifactId}.runners.CucumberRestIT
 
     Or run it by tag like this>
     mvn verify -Dcucumber.options="--tags @rest"

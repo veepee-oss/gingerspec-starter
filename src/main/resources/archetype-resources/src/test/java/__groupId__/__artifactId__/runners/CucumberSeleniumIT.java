@@ -1,9 +1,9 @@
-package ${groupId}.${artifactId}.runner;
+package ${groupId}.${artifactId}.runners;
 
 import cucumber.api.CucumberOptions;
 import org.testng.annotations.Factory;
 import com.privalia.qa.data.BrowsersDataProvider;
-import ${groupId}.${artifactId}.hooks.BaseTest;
+import ${groupId}.${artifactId}.utils.BaseTest;
 
 
 /**

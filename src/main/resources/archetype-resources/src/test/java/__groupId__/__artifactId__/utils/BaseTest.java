@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ${groupId}.${artifactId}.hooks;
+package ${groupId}.${artifactId}.utils;
 
 
 import com.privalia.qa.utils.BaseGTest;

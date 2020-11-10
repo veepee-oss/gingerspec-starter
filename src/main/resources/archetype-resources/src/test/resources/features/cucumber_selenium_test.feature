@@ -6,7 +6,7 @@ Feature: Testing basic functionality of a web page
     bootstrap some necessary dependencies. Failing to do so will make your feature fail.
 
     You can run this feature using the following command:
-    mvn verify -Dit.test=${groupId}.${artifactId}.runner.CucumberSeleniumIT
+    mvn verify -Dit.test=${groupId}.${artifactId}.runners.CucumberSeleniumIT
 
     Or run it by tag like this>
     mvn verify -Dcucumber.options="--tags @web"

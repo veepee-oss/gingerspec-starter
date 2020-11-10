@@ -1,7 +1,7 @@
-package ${groupId}.${artifactId}.runner;
+package ${groupId}.${artifactId}.runners;
 
 import cucumber.api.CucumberOptions;
-import ${groupId}.${artifactId}.hooks.BaseTest;
+import ${groupId}.${artifactId}.utils.BaseTest;
 
 
 /**
@@ -12,15 +12,14 @@ import ${groupId}.${artifactId}.hooks.BaseTest;
  * features
  */
 @CucumberOptions(plugin = {
-                "json:target/CucumberBackendIT.json",
-                "html:target/CucumberBackendIT",
-                "junit:target/CucumberBackendIT.xml"
+                "json:target/CucumberRestIT.json",
+                "html:target/CucumberRestIT",
+                "junit:target/CucumberRestIT.xml"
         }, features =
         {
-                "src/test/resources/features/cucumber_backend_test.feature"
+                "src/test/resources/features/cucumber_rest_test.feature"
         },
         glue = "classpath:${groupId}.${artifactId}.glue")
-public class CucumberBackendIT extends BaseTest {
-
+public class CucumberRestIT extends BaseTest {
 
 }
