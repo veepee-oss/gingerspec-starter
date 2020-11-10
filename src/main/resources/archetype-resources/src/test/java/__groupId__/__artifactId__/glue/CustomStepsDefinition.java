@@ -15,7 +15,7 @@ import org.openqa.selenium.WebDriver;
  * make use of the properties of the {@link CommonG} object
  *
  * Check out the javadoc for a full description of all the methods in each class:
- * https://privaliatech.github.io/gingerspec/com/privalia/qa/specs/package-summary.html
+ * https://vptechoss.github.io/gingerspec/com/privalia/qa/specs/package-summary.html
  */
 public class CustomStepsDefinition extends BaseGSpec {
 
@@ -76,7 +76,7 @@ public class CustomStepsDefinition extends BaseGSpec {
      *
      * Check all the available methods in the corresponding javadoc class. Notice that
      * all methods have a corresponding gherkin step:
-     * https://privaliatech.github.io/gingerspec/com/privalia/qa/specs/SeleniumGSpec.html
+     * https://vptechoss.github.io/gingerspec/com/privalia/qa/specs/SeleniumGSpec.html
      *
      * @throws Throwable    Throwable
      */

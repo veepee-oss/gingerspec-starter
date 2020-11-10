@@ -13,11 +13,11 @@ Feature: Testing basic functionality of a web page
 
     P.S. Besides using your local browser, you can specify a selenium grid and even a Selenium standalone node
     for running selenium tests. For more information about this, check the wiki of gingerspec at:
-    https://github.com/PrivaliaTech/gingerspec/wiki/Running-Selenium-tests
+    https://github.com/vpTechOSS/gingerspec/wiki/Running-Selenium-tests
 
     You can check a more complete list of selenium steps and examples at:
-    https://github.com/PrivaliaTech/gingerspec/wiki/Selenium-steps
-    https://privaliatech.github.io/gingerspec/com/privalia/qa/specs/SeleniumGSpec.html
+    https://github.com/vpTechOSS/gingerspec/wiki/Selenium-steps
+    https://vptechoss.github.io/gingerspec/com/privalia/qa/specs/SeleniumGSpec.html
 
     Scenario: Fill the form and click the submit button
         Given I go to 'http://demoqa.com/text-box'

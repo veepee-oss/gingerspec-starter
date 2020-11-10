@@ -14,8 +14,8 @@ Feature: Testing a RestFull API
     mvn verify -Dcucumber.options="--tags @rest"
 
     You can check a more complete list of steps and examples at:
-    https://github.com/PrivaliaTech/gingerspec/wiki/REST-steps
-    https://privaliatech.github.io/gingerspec/com/privalia/qa/specs/RestSpec.html
+    https://github.com/vpTechOSS/gingerspec/wiki/REST-steps
+    https://vptechoss.github.io/gingerspec/com/privalia/qa/specs/RestSpec.html
 
     Scenario: A successful response with a valid body is returned
         Given I securely send requests to 'jsonplaceholder.typicode.com:443'

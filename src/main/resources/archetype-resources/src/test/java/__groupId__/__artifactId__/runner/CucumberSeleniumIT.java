@@ -13,7 +13,7 @@ import ${groupId}.${artifactId}.hooks.BaseTest;
  * Notice that this class contains an special constructor. This constructor
  * is necessary if you want to execute your selenium features against a selenium
  * Gird/Node. For more information on how to do this, check the instructions here:
- * https://github.com/PrivaliaTech/gingerspec/wiki/Running-Selenium-tests
+ * https://github.com/vpTechOSS/gingerspec/wiki/Running-Selenium-tests
  *
  */
 @CucumberOptions(plugin = {
