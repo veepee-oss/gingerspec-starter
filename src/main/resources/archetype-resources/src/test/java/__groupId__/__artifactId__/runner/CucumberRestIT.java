@@ -13,7 +13,8 @@ import ${groupId}.${artifactId}.hooks.BaseTest;
  */
 @CucumberOptions(plugin = {
                 "json:target/CucumberRestIT.json",
-                "html:target/CucumberRestIT"
+                "html:target/CucumberRestIT",
+                "junit:target/CucumberRestIT.xml"
         }, features =
         {
                 "src/test/resources/features/cucumber_rest_test.feature"
