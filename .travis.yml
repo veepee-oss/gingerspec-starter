@@ -23,7 +23,7 @@ deploy:
     file:
       - gingerspec-starter/target/gingerspec-starter-$project_version.jar
     on:
-      repo: PrivaliaTech/gingerspec-starter
+      repo: vpTechOSS/gingerspec-starter
       tags: false
       all_branches: true
       condition: ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} =~ ^release\/.*$
