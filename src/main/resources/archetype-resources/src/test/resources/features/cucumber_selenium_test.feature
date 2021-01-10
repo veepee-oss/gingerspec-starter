@@ -9,14 +9,14 @@ Feature: Testing basic functionality of a web page
     mvn verify -Dit.test=${groupId}.${artifactId}.runners.CucumberSeleniumIT
 
     Or run it by tag like this>
-    mvn verify -Dcucumber.options="--tags @web"
+    mvn verify -Dcucumber.filter.tags="@web"
 
     P.S. Besides using your local browser, you can specify a selenium grid and even a Selenium standalone node
     for running selenium tests. For more information about this, check the wiki of gingerspec at:
     https://github.com/vpTechOSS/gingerspec/wiki/Running-Selenium-tests
 
     You can check a more complete list of selenium steps and examples at:
-    https://github.com/vpTechOSS/gingerspec/wiki/Selenium-steps
+    https://github.com/vpTechOSS/gingerspec/wiki/Gherkin-steps#selenium-steps
     https://vptechoss.github.io/gingerspec/com/privalia/qa/specs/SeleniumGSpec.html
 
     Scenario: Fill the form and click the submit button

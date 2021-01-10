@@ -57,7 +57,6 @@
             <includes>
                 <include>configuration/*.properties</include>
                 <include>log4j2.xml</include>
-                <include>META-INF/aop.xml</include>
             </includes>
         </fileSet>
     </fileSets>
