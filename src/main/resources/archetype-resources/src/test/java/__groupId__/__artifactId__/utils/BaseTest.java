@@ -54,4 +54,11 @@ abstract public class BaseTest extends BaseGTest {
     @AfterClass()
     public void afterClass() {
     }
+
+    /* Set parallel = true to allow parallel test execution */
+    @Override
+    @DataProvider(parallel = false)
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
 }
