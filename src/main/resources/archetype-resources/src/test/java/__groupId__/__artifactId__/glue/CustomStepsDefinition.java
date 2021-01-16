@@ -55,10 +55,9 @@ public class CustomStepsDefinition extends BaseGSpec {
 
 
     /**
-     * This is an example of how to create your own REST steps. YOu can directly use
+     * This is an example of how to create your own REST steps. You can directly use
      * REST-Assured for this (https://rest-assured.io/). For more information, check
      * https://github.com/vpTechOSS/gingerspec/wiki/Creating-your-own-steps#rest-api-example
-     * @throws Throwable    Throwable
      */
     @Given("^I verify that a successful response with a valid body is returned$")
     public void myCustomRestStep() {

@@ -9,11 +9,6 @@ Feature: Testing backend related functionality
   You can check a more complete list of steps and examples at:
   https://github.com/vpTechOSS/gingerspec/wiki/Gherkin-steps
 
-  Scenario: Operations with variables
-    Given I save 'Foo' in variable 'VARNAME'
-    Then '${toUpperCase:${VARNAME}}' matches 'FOO'
-    Then '${toLowerCase:${VARNAME}}' matches 'foo'
-
   Scenario: Executing commands in the host shell
     Given I run 'ls -l' locally with exit status '0' and save the value in environment variable 'RESULT'
     Then '${RESULT}' contains 'total'
