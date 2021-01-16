@@ -1,23 +1,17 @@
 @web
 Feature: Testing basic functionality of a web page
 
-    This feature shows an example of how to test a web application using Selenium. Please, notice that
-    the @web annotation in the beginning of the feature is NECESSARY since it indicates the library to
-    bootstrap some necessary dependencies. Failing to do so will make your feature fail.
+    The @web annotation is necessary to be included when working with selenium, here is why:
+    https://github.com/vpTechOSS/gingerspec/wiki/Hook-tags#web-tag
 
     You can run this feature using the following command:
     mvn verify -Dit.test=${groupId}.${artifactId}.runners.CucumberSeleniumIT
 
     Or run it by tag like this>
-    mvn verify -Dcucumber.options="--tags @web"
-
-    P.S. Besides using your local browser, you can specify a selenium grid and even a Selenium standalone node
-    for running selenium tests. For more information about this, check the wiki of gingerspec at:
-    https://github.com/vpTechOSS/gingerspec/wiki/Running-Selenium-tests
+    mvn verify -Dcucumber.filter.tags="@web"
 
     You can check a more complete list of selenium steps and examples at:
-    https://github.com/vpTechOSS/gingerspec/wiki/Selenium-steps
-    https://vptechoss.github.io/gingerspec/com/privalia/qa/specs/SeleniumGSpec.html
+    https://github.com/vpTechOSS/gingerspec/wiki/Gherkin-steps#selenium-steps
 
     Scenario: Fill the form and click the submit button
         Given I go to 'http://demoqa.com/text-box'
@@ -28,20 +22,16 @@ Feature: Testing basic functionality of a web page
         And I click on the element with 'id:submit'
         Then at least '1' elements exists with 'id:output'
 
-    Scenario: This is the same scenario as above, but in one line, using gingerspec functions
-        Given Fill the form and click the submit button
-
-    Scenario: Write text on a text input
-        Given My app is running in 'demoqa.com'
-        Given I browse to '/radio-button'
+    Scenario: Interacting with radio buttons and doing double click
+        Given I go to 'http://demoqa.com/radio-button'
         And I click on the element with 'xpath://input[@id='yesRadio']/following-sibling::label'
         And at least '1' elements exists with 'id:yesRadio'
         And the element on index '0' IS selected
         And I wait '3' seconds
-        Given I browse to '/buttons'
+        Given I go to 'http://demoqa.com/buttons'
         And I double click on the element with 'id:doubleClickBtn'
         And I right click on the element with 'id:rightClickBtn'
         And I click on the element with 'xpath://button[.='Click Me']'
 
-    Scenario: This is another example, accessing directly selenium driver
-        Given I type the name 'John Smith' in the form and click submit
+    Scenario: This is an example of a custom Selenium step
+        Given Fill the form and click the submit button

@@ -1,6 +1,6 @@
 package ${groupId}.${artifactId}.runners;
 
-import cucumber.api.CucumberOptions;
+import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.Factory;
 import com.privalia.qa.data.BrowsersDataProvider;
 import ${groupId}.${artifactId}.utils.BaseTest;
@@ -18,7 +18,7 @@ import ${groupId}.${artifactId}.utils.BaseTest;
  */
 @CucumberOptions(plugin = {
                 "json:target/CucumberSeleniumIT.json",
-                "html:target/CucumberSeleniumIT",
+                "html:target/CucumberSeleniumIT.html",
                 "junit:target/CucumberSeleniumIT.xml"
         }, features =
         {

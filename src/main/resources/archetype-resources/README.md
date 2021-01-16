@@ -34,12 +34,12 @@ mvn verify -Dit.test=com.package.runnerClass.java
 
 To run all integration tests but filter scenarios with by tag:
 ```
-mvn verify -Dcucumber.options="--tags @web"
-mvn verify -Dcucumber.options="--tags @web and @fast"
-mvn verify -Dcucumber.options="--tags @web and not @fast"
+mvn verify -Dcucumber.filter.tags="@web"
+mvn verify -Dcucumber.filter.tags="@web and @fast"
+mvn verify -Dcucumber.filter.tags="@web and not @fast"
 ```
   
-More information on how to run automated tests can be found [here](https://github.com/PrivaliaTech/gingerspec/wiki/Getting-started#tests-execution)
+More information on how to run automated tests can be found [here](https://github.com/vpTechOSS/gingerspec/wiki/Running-your-tests)
 
 
 ### Break down into end to end tests

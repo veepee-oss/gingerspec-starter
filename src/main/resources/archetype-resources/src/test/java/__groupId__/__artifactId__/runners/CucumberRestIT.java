@@ -1,6 +1,6 @@
 package ${groupId}.${artifactId}.runners;
 
-import cucumber.api.CucumberOptions;
+import io.cucumber.testng.CucumberOptions;
 import ${groupId}.${artifactId}.utils.BaseTest;
 
 
@@ -13,7 +13,7 @@ import ${groupId}.${artifactId}.utils.BaseTest;
  */
 @CucumberOptions(plugin = {
                 "json:target/CucumberRestIT.json",
-                "html:target/CucumberRestIT",
+                "html:target/CucumberRestIT.html",
                 "junit:target/CucumberRestIT.xml"
         }, features =
         {
