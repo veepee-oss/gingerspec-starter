@@ -1,7 +1,7 @@
 GingerSpec starter
 =============================
 
-[![Build Status](https://travis-ci.com/vpTechOSS/gingerspec-starter.svg)](https://travis-ci.org/vpTechOSS/gingerspec-starter)
+[![gingerspec-starter pipeline](https://github.com/veepee-oss/gingerspec-starter/actions/workflows/maven-build.yml/badge.svg)](https://github.com/veepee-oss/gingerspec-starter/actions/workflows/maven-build.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter)
 ![GitHub Release Date](https://img.shields.io/github/release-date/PrivaliaTech/gingerspec-starter)
 
@@ -35,7 +35,7 @@ Follow the on-screen instructions and provide the properties **artifactId**, **g
 If for any reason you are unable to access this archetype (or you want to make changes to this archetype configuration), you can download the project and build it in your local machine:
 
 ``` bash
-$ git clone git@github.com:PrivaliaTech/gingerspec-starter.git
+$ git clone git@github.com:veepee-oss/gingerspec-starter.git
 $ cd gingerspec-starter
 $ mvn install
 $ mvn archetype:update-local-catalog
