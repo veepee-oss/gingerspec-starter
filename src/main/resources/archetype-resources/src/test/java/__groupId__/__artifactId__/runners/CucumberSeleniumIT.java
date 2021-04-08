@@ -1,8 +1,6 @@
 package ${groupId}.${artifactId}.runners;
 
 import io.cucumber.testng.CucumberOptions;
-import org.testng.annotations.Factory;
-import com.privalia.qa.data.BrowsersDataProvider;
 import ${groupId}.${artifactId}.utils.BaseTest;
 
 
@@ -27,9 +25,5 @@ import ${groupId}.${artifactId}.utils.BaseTest;
         glue = "classpath:${groupId}.${artifactId}.glue")
 public class CucumberSeleniumIT extends BaseTest {
 
-    @Factory(dataProviderClass = BrowsersDataProvider.class, dataProvider = "availableUniqueBrowsers")
-    public CucumberSeleniumIT(String browser) {
-        this.browser = browser;
-    }
 
 }
