@@ -39,7 +39,7 @@ mvn verify -Dcucumber.filter.tags="@web and @fast"
 mvn verify -Dcucumber.filter.tags="@web and not @fast"
 ```
   
-More information on how to run automated tests can be found [here](https://github.com/vpTechOSS/gingerspec/wiki/Running-your-tests)
+More information on how to run automated tests can be found [here](https://github.com/veepee-oss/gingerspec/wiki/Running-your-tests)
 
 
 ### Break down into end to end tests
@@ -66,4 +66,4 @@ Give an example
   
 This module depends on the GingerSpec framework (QA testing library), where common logic and steps are implemented. 
   
-Check more information about the GingerSpec framework [here](https://github.com/PrivaliaTech/gingerspec/wiki)  
+Check more information about the GingerSpec framework [here](https://github.com/veepee-oss/gingerspec/wiki)  
