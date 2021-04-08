@@ -4,7 +4,7 @@
 
     <groupId>com.github.privaliatech</groupId>
     <artifactId>gingerspec-starter</artifactId>
-    <version>1.15-SNAPSHOT</version>
+    <version>1.15</version>
 
     <name>Archetype - gingerspec-starter</name>
     <description>A maven archetype for creating new automation projects based on gingerspec library.</description>
