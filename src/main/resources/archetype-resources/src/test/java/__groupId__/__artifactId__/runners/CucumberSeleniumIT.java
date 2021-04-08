@@ -22,7 +22,7 @@ import ${groupId}.${artifactId}.utils.BaseTest;
                 "junit:target/CucumberSeleniumIT.xml"
         }, features =
         {
-                "src/test/resources/features/cucumber_selenium_test.feature"
+                "src/test/resources/features"
         },
         glue = "classpath:${groupId}.${artifactId}.glue")
 public class CucumberSeleniumIT extends BaseTest {

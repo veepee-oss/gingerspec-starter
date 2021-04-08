@@ -34,16 +34,6 @@ services:
 # are executed in parallel. This is just an example that you can use as a starting point for executing your tests in the pipeline
 # but you can organize your test in any other configuration.
 
-CucumberRestIT:
-  stage: test
-  script:
-    - 'mvn verify -Dit.test=${groupId}.${artifactId}.runners.CucumberRestIT'
-  artifacts:
-    paths:
-    - target/*.json
-    when: always
-    expire_in: 4 weeks
-
 CucumberSeleniumIT:
   stage: test
   script:
