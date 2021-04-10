@@ -18,7 +18,7 @@ public class CustomStepsDefinition extends BaseGSpec {
 
     /**
      * Example of how to inherit the needed objects from GingerSpec. For more information
-     * check https://github.com/vpTechOSS/gingerspec/wiki/Creating-your-own-steps
+     * check https://github.com/veepee-oss/gingerspec/wiki/Creating-your-own-steps
      * @param spec the CommonGSpec class
      */
     public CustomStepsDefinition(CommonG spec) {
@@ -35,7 +35,7 @@ public class CustomStepsDefinition extends BaseGSpec {
 
     /**
      * This is an example of how to create your own selenium steps. For more info check
-     * https://github.com/vpTechOSS/gingerspec/wiki/Creating-your-own-steps#selenium-example
+     * https://github.com/veepee-oss/gingerspec/wiki/Creating-your-own-steps#selenium-example
      * @throws Throwable    Throwable
      */
     @Given("^Fill the form and click the submit button$")
@@ -57,7 +57,7 @@ public class CustomStepsDefinition extends BaseGSpec {
     /**
      * This is an example of how to create your own REST steps. You can directly use
      * REST-Assured for this (https://rest-assured.io/). For more information, check
-     * https://github.com/vpTechOSS/gingerspec/wiki/Creating-your-own-steps#rest-api-example
+     * https://github.com/veepee-oss/gingerspec/wiki/Creating-your-own-steps#rest-api-example
      */
     @Given("^I verify that a successful response with a valid body is returned$")
     public void myCustomRestStep() {

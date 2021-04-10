@@ -22,21 +22,21 @@ Give examples
 
 Explain how to run the automated tests for this system
 
-To run all integration tests
+To run all integration tests (runners)
 ```
 mvn verify
 ```
 
 To run a specific integration tests:
 ```
-mvn verify -Dit.test=com.package.runnerClass.java
+mvn verify -Dit.test=${groupId}.${artifactId}.runners.CucumberRunnerIT
 ```
 
 To run all integration tests but filter scenarios with by tag:
 ```
 mvn verify -Dcucumber.filter.tags="@web"
-mvn verify -Dcucumber.filter.tags="@web and @fast"
-mvn verify -Dcucumber.filter.tags="@web and not @fast"
+mvn verify -Dcucumber.filter.tags="@web or @rest"
+mvn verify -Dcucumber.filter.tags="@web and not @rest"
 ```
   
 More information on how to run automated tests can be found [here](https://github.com/veepee-oss/gingerspec/wiki/Running-your-tests)

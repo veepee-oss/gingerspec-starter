@@ -98,9 +98,7 @@ Directories/packages names are changed accordingly, from this:
 ``` bash
 └── __groupId__
      ├── __artifactId__
-     │   ├── CucumberBackendIT.java
-     │   ├── CucumberRestIT.java
-     │   └── CucumberSeleniumIT.java
+     │   └── CucumberRunnerIT.java
      ├── glue
      │   └── CustomStepsDefinition.java
      └── utils
@@ -115,9 +113,7 @@ To this
 ``` bash
 └── com.privalia
         ├──myproject
-        │   ├── CucumberBackendIT.java
-        │   ├── CucumberRestIT.java
-        │   └── CucumberSeleniumIT.java
+        │   └── CucumberRunnerIT.java
         ├── glue
         │   └── CustomStepsDefinition.java
         └── utils

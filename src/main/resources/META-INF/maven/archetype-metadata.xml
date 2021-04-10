@@ -11,12 +11,12 @@
                 <include>CHANGELOG.md</include>
                 <include>.gitignore</include>
                 <include>.gitlab-ci.yml</include>
+                <include>README.md</include>
             </includes>
         </fileSet>
         <fileSet filtered="false" encoding="UTF-8">
             <directory></directory>
             <includes>
-                <include>README.md</include>
                 <include>Locators-cheatsheet.pdf</include>
             </includes>
         </fileSet>

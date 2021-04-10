@@ -2,18 +2,15 @@
 Feature: Testing a RestFull API
 
     The @rest annotation is necessary when using GingerSpec Rest steps, here is why:
-    https://github.com/vpTechOSS/gingerspec/wiki/Hook-tags#rest-tag
+    https://github.com/veepee-oss/gingerspec/wiki/Hook-tags#rest-tag
 
     This example uses https://jsonplaceholder.typicode.com, Fake Online REST API for Testing and Prototyping
 
     Execute this test like this:
-    mvn verify -Dit.test=${groupId}.${artifactId}.runners.CucumberRestIT
-
-    Or run it by tag like this:
     mvn verify -Dcucumber.filter.tags="@rest"
 
     You can check a more complete list of steps and examples at:
-    https://github.com/vpTechOSS/gingerspec/wiki/Gherkin-steps#rest-steps
+    https://github.com/veepee-oss/gingerspec/wiki/Gherkin-steps#rest-steps
 
     Scenario: A successful response with a valid body is returned
         Given I securely send requests to 'jsonplaceholder.typicode.com:443'

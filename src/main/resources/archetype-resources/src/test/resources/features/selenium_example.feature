@@ -2,16 +2,13 @@
 Feature: Testing basic functionality of a web page
 
     The @web annotation is necessary to be included when working with selenium, here is why:
-    https://github.com/vpTechOSS/gingerspec/wiki/Hook-tags#web-tag
+    https://github.com/veepee-oss/gingerspec/wiki/Hook-tags#web-tag
 
     You can run this feature using the following command:
-    mvn verify -Dit.test=${groupId}.${artifactId}.runners.CucumberSeleniumIT
-
-    Or run it by tag like this>
     mvn verify -Dcucumber.filter.tags="@web"
 
     You can check a more complete list of selenium steps and examples at:
-    https://github.com/vpTechOSS/gingerspec/wiki/Gherkin-steps#selenium-steps
+    https://github.com/veepee-oss/gingerspec/wiki/Gherkin-steps#selenium-steps
 
     Scenario: Fill the form and click the submit button
         Given I go to 'http://demoqa.com/text-box'
