@@ -27,12 +27,12 @@ To run all integration tests (runners)
 mvn verify
 ```
 
-To run a specific integration tests:
+To run a specific integracion test (specific runner class):
 ```
 mvn verify -Dit.test=${groupId}.${artifactId}.runners.CucumberRunnerIT
 ```
 
-To run all integration tests but filter scenarios with by tag:
+To run all integration tests but filter scenarios by tag:
 ```
 mvn verify -Dcucumber.filter.tags="@web"
 mvn verify -Dcucumber.filter.tags="@web or @rest"

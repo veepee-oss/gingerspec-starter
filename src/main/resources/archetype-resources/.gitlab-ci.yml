@@ -2,10 +2,12 @@
 # This is an example configuration file for the gitlab CI pipeline
 #
 # This template shows how to run the different example tests that are provided
-# when you first create the project.
+# when you first create the project. Use this template as an starting point
+# for running your own tests on the gitlab CI pipeline
 #
-# Use this template as an starting point for running your own tests on the gitlab
-# CI pipeline
+# IMPORTANT! The docker images used here are from the internal veepee artifactory
+# (registry.vptech.eu) so you may need to add you credentials to the pipeline
+# configuration to avoid an unauthorized error when using them.
 #
 # Check the README file to see all alternative ways of running your features.
 #
@@ -14,7 +16,7 @@
 
 
 # This template uses jdk11 for for running tests
-image: maven:3.6.1-jdk-11
+image: core-qms-docker.registry.vptech.eu/maven:3.6.1-jdk-11
 
 
 # Cache downloaded dependencies and plugins between builds.
@@ -23,25 +25,20 @@ cache:
   paths:
     - .m2/repository
 
-
-# Use a selenium standalone node for running selenium tests
-services:
-  - name: selenium/standalone-chrome:3.141.59
-    alias: node
-
-
-# In this example, each runner class is executed in a separate job inside the same stage "test". Jobs that are inside the same stage
-# are executed in parallel. This is just an example that you can use as a starting point for executing your tests in the pipeline
-# but you can organize your test in any other configuration.
+# This is just an example that you can use as a starting point for executing your tests in the pipeline. Jobs that are inside the same stage
+# are executed in parallel
 
 UITest:
   stage: test
+  services:
+    - name: core-qms-docker.registry.vptech.eu/selenium/standalone-chrome:3.141.59
+      alias: node
   script:
     - 'mvn verify -Dcucumber.filter.tags="@web" -DSELENIUM_GRID=http://node:4444/wd/hub'
   artifacts:
     paths:
-    - target/executions/**
-    - target/*.json
+      - target/executions/**
+      - target/*.json
     when: always
     expire_in: 4 weeks
 
