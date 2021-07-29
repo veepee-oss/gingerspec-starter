@@ -17,14 +17,14 @@
     </scm>
 
     <organization>
-        <name>Privalia</name>
-        <url>https://es.privalia.com/</url>
+        <name>Veepee</name>
+        <url>https://www.veepee.com/</url>
     </organization>
 
     <licenses>
         <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <name>ISC License</name>
+            <url>https://www.isc.org/licenses/</url>
             <distribution>repo</distribution>
         </license>
     </licenses>

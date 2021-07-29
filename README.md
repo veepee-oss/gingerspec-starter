@@ -4,6 +4,7 @@ GingerSpec starter
 [![gingerspec-starter pipeline](https://github.com/veepee-oss/gingerspec-starter/actions/workflows/maven-build.yml/badge.svg)](https://github.com/veepee-oss/gingerspec-starter/actions/workflows/maven-build.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter)
 ![GitHub Release Date](https://img.shields.io/github/release-date/PrivaliaTech/gingerspec-starter)
+[![License](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 A maven archetype for creating new automation projects.
 
