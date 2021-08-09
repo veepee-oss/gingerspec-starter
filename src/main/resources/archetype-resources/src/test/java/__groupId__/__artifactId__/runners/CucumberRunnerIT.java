@@ -5,11 +5,10 @@ import ${groupId}.${artifactId}.utils.BaseTest;
 
 
 /**
- * This is an example on how to call an specific feature to be executed.
+ * This is the runner class responsible of running the included *.feature files in the project.
  * Glue files can be specified in the {@link CucumberOptions} annotation
  *
- * Check out the utils.BaseTest class, there you can create TestNG hooks
- * and more :)
+ * Also check out the {@link BaseTest} class, there you can create TestNG hooks and more :)
  */
 @CucumberOptions(plugin = {
                 "json:target/CucumberRunnerIT.json",

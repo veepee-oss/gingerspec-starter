@@ -8,6 +8,9 @@ import org.testng.annotations.Test;
 /**
  * This is an example of a simple TestNG test. For more information, you can check
  * https://testng.org/doc/
+ *
+ * For more info on how to run your TestNG tests directly in Intellij IDEA check:
+ * https://github.com/veepee-oss/gingerspec/wiki/Setting-up-your-IDE#running-testng-test
  */
 public class TestRunnerIT {
 

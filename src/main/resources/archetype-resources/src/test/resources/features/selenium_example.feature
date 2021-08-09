@@ -1,14 +1,12 @@
 @web
 Feature: Testing basic functionality of a web page
 
-  The @web annotation is responsible of initializing the driver. Read more here:
-  https://github.com/veepee-oss/gingerspec/wiki/Running-Selenium-tests
+  This is an example of how to use the provided Selenium steps of GingerSpec to perform actions on a web page. For a
+  complete list of all steps, check https://github.com/veepee-oss/gingerspec/wiki/Gherkin-steps#selenium-steps
 
-  You can run this feature using the following command:
-  mvn verify -Dcucumber.filter.tags="@web"
-
-  You can check a more complete list of selenium steps and examples at:
-  https://github.com/veepee-oss/gingerspec/wiki/Gherkin-steps#selenium-steps
+  You can run this feature directly in Intellij IDEA, for more info check:
+  https://github.com/veepee-oss/gingerspec/wiki/Setting-up-your-IDE#running-cucumber-test
+  Or by running the following command in the terminal: mvn verify -Dcucumber.filter.tags="@web"
 
   Scenario: Fill the form and click the submit button
     Given I go to 'http://demoqa.com/text-box'

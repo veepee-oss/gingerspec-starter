@@ -9,7 +9,7 @@ import org.testng.annotations.*;
 import java.lang.reflect.Method;
 
 /**
- * Use this class to define your own TestNG hooks
+ * Use this class to define your own TestNG hooks. For more info on TestNG hooks check:
  * https://testng.org/doc/documentation-main.html#annotations
  */
 abstract public class BaseTest extends BaseGTest {

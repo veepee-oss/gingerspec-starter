@@ -9,7 +9,12 @@ import org.openqa.selenium.WebDriver;
 
 /**
  * Glue code of your applications. Use this class to create your own
- * step definitions or cucumber hooks.
+ * step definitions or cucumber hooks. For more info check:
+ * https://cucumber.io/docs/cucumber/step-definitions/
+ * https://cucumber.io/docs/cucumber/api/#hooks
+ *
+ * For more info on how to create your own steps, you can check:
+ * https://github.com/veepee-oss/gingerspec/wiki/Creating-your-own-steps
  */
 public class CustomStepsDefinition extends BaseGSpec {
 
