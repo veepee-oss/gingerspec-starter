@@ -22,8 +22,7 @@ public class CustomStepsDefinition extends BaseGSpec {
     RestSpec restSpec;
 
     /**
-     * Example of how to inherit the needed objects from GingerSpec. For more information
-     * check https://github.com/veepee-oss/gingerspec/wiki/Creating-your-own-steps
+     * Example of how to inherit the needed objects from GingerSpec.
      * @param spec the CommonGSpec class
      */
     public CustomStepsDefinition(CommonG spec) {
@@ -36,7 +35,6 @@ public class CustomStepsDefinition extends BaseGSpec {
         /* Access all functions for working with REST services */
         restSpec = new RestSpec(this.commonspec);
     }
-
 
     /**
      * This is an example of how to create your own selenium steps. For more info check
@@ -57,7 +55,6 @@ public class CustomStepsDefinition extends BaseGSpec {
         seleniumGSpec.scrollUntilElementVisibleByLocator("down","id","submit",null);
         driver.findElement(By.id("submit")).click();
     }
-
 
     /**
      * This is an example of how to create your own REST steps. You can directly use
