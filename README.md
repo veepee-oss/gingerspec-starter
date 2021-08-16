@@ -19,10 +19,16 @@ $ mvn archetype:generate -B -DarchetypeArtifactId=maven-archetype-archetype -Dgr
 
 ## Using this archetype
 
-To bootstrap a new template, execute the following command in your terminal:
+To bootstrap a new template, execute the following command in your terminal (change the value of groupId, version and artifactId according to your specific needs):
 
-    $ mvn -U archetype:generate -DarchetypeGroupId=com.github.privaliatech -DarchetypeArtifactId=gingerspec-starter
-
+``` bash
+mvn archetype:generate \
+  -DarchetypeGroupId=com.github.privaliatech \
+  -DarchetypeArtifactId=gingerspec-starter \
+  -DgroupId=eu.vptech \
+  -Dversion=1.0-SNAPSHOT \
+  -DartifactId=myproject
+```
 
 > About the version number: <br>
 > you can also use -DarchetypeVersion=RELEASE to pull an specific release number
