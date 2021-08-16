@@ -19,7 +19,7 @@ $ mvn archetype:generate -B -DarchetypeArtifactId=maven-archetype-archetype -Dgr
 
 ## Using this archetype
 
-To bootstrap a new template, execute the following command in your terminal (change the value of groupId, version and artifactId according to your specific needs):
+To bootstrap a new template, execute the following command in your terminal (change the value of **artifactId**, **groupId** and **version** according to your specific needs):
 
 ``` bash
 mvn archetype:generate \
@@ -32,9 +32,6 @@ mvn archetype:generate \
 
 > About the version number: <br>
 > you can also use -DarchetypeVersion=RELEASE to pull an specific release number
-
-
-Follow the on-screen instructions and provide the properties **artifactId**, **groupId** , **version** and  **package**
 
 
 ## Using this archetype locally (optional)
