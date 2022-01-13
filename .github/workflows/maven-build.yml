@@ -29,3 +29,12 @@ jobs:
             ${{ runner.os }}-maven-
     - name: Build with Maven
       run: mvn install -Dmaven.test.skip=true
+    - name: Update local archetype catalog
+      run: mvn archetype:update-local-catalog && mvn archetype:crawl
+    - name: Generating a new project based on local archetype and performing a dry-run
+      run: |
+        Yes | mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=com.github.privaliatech -DarchetypeArtifactId=gingerspec-starter -DgroupId=eu.vptech -Dversion=1.0-SNAPSHOT -DartifactId=myproject
+        cd myproject/
+        mvn verify -Dcucumber.execution.dry-run=true
+
+
