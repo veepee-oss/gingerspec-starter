@@ -16,7 +16,7 @@
 
 
 # This template uses jdk11 for for running tests
-image: core-qms-docker.registry.vptech.eu/maven:3.6.1-jdk-11
+image: docker.registry.vptech.eu/maven:3.8.5-jdk-11
 
 
 # Cache downloaded dependencies and plugins between builds.
@@ -31,7 +31,7 @@ cache:
 UITest:
   stage: test
   services:
-    - name: core-qms-docker.registry.vptech.eu/selenium/standalone-chrome:3.141.59
+    - name: docker.registry.vptech.eu/selenium/standalone-chrome:3.141.59
       alias: node
   script:
     - 'mvn verify -Dcucumber.filter.tags="@web" -DSELENIUM_GRID=http://node:4444/wd/hub'
