@@ -47,13 +47,10 @@ public class CustomStepsDefinition extends BaseGSpec {
         WebDriver driver = this.commonspec.getDriver();
 
         /* Use regular selenium functions and APIs */
-        driver.get("http://demoqa.com/text-box");
-        driver.findElement(By.id("userName")).sendKeys("John");
-        driver.findElement(By.id("userEmail")).sendKeys("john.smith@email.com");
-
-        /* You can mix your own java code with the GingerSpec functions from SeleniumGSpec ;) */
-        seleniumGSpec.scrollUntilElementVisibleByLocator("down","id","submit",null);
-        driver.findElement(By.id("submit")).click();
+        driver.get("https://testpages.herokuapp.com/styled/basic-html-form-test.html");
+        driver.findElement(By.name("username")).sendKeys("John");
+        driver.findElement(By.name("password")).sendKeys("12345678");
+        driver.findElements(By.name("submitbutton")).get(1).click();
     }
 
     /**

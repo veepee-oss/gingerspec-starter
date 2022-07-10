@@ -1,32 +1,33 @@
 @web
 Feature: Testing basic functionality of a web page
 
-  This is an example of how to use the provided Selenium steps of GingerSpec to perform actions on a web page. For a
-  complete list of all steps, check https://github.com/veepee-oss/gingerspec/wiki/Gherkin-steps#selenium-steps
+  This is an example of how to use the provided Selenium steps of GingerSpec to perform actions on a web page. This
+  example uses https://testpages.herokuapp.com, a fake online web page for testing
 
-  You can run this feature directly in Intellij IDEA, for more info check:
-  https://github.com/veepee-oss/gingerspec/wiki/Setting-up-your-IDE#running-cucumber-test
-  Or by running the following command in the terminal: mvn verify -Dcucumber.filter.tags="@web"
+  Steps documentation  -> https://github.com/veepee-oss/gingerspec/wiki/Gherkin-steps#selenium-steps
+  Run this in terminal -> mvn verify -Dcucumber.filter.tags="@web"
+  Run in IntellijIDEA  -> https://github.com/veepee-oss/gingerspec/wiki/Setting-up-your-IDE#running-cucumber-test
 
   Scenario: Fill the form and click the submit button
-    Given I go to 'http://demoqa.com/text-box'
-    And I type 'John' on the element with 'id:userName'
-    And I type 'john.smith@email.com' on the element with 'id:userEmail'
-    And I type '123 fake address' on the element with 'id:currentAddress'
-    When I scroll down until the element with 'id:submit' is visible
-    And I click on the element with 'id:submit'
-    Then at least '1' elements exists with 'id:output'
+    Given I go to 'https://testpages.herokuapp.com/styled/basic-html-form-test.html'
+    And I type 'John' on the element with 'name:username'
+    And I type '12345678' on the element with 'name:password'
+    And I type on the element with 'name:comments' the text:
+      """
+         249 avenue du Président Wilson
+         LA PLAINE SAINT DENIS (93210)
+         FRANCE
+      """
+    When I select 'Drop Down Item 1' on the element with 'name:dropdown'
+    And I click on the element with 'name:submitbutton' index '1'
 
-  Scenario: Interacting with radio buttons and doing double click
-    Given I go to 'http://demoqa.com/radio-button'
-    And I click on the element with 'xpath://input[@id='yesRadio']/following-sibling::label'
-    And at least '1' elements exists with 'id:yesRadio'
-    And the element on index '0' IS selected
-    And I wait '3' seconds
-    Given I go to 'http://demoqa.com/buttons'
-    And I double click on the element with 'id:doubleClickBtn'
-    And I right click on the element with 'id:rightClickBtn'
-    And I click on the element with 'xpath://button[.='Click Me']'
+
+  Scenario: Wait until the element is present
+    Given I go to 'https://testpages.herokuapp.com/styled/dynamic-buttons-simple.html'
+    And I click on the element with 'id:button00'
+    And I wait until element with 'id:button01' is present
+    And I click on the element with 'id:button01'
+
 
   Scenario: This is an example of a custom Selenium step
     Given Fill the form and click the submit button
