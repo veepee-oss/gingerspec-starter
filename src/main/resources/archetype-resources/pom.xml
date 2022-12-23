@@ -5,7 +5,7 @@
 
   <properties>
     <!-- Check the latest version of gingerspec in: https://mvnrepository.com/artifact/com.github.privaliatech/gingerspec -->
-    <privalia.gingerspec.version>2.2.13</privalia.gingerspec.version>
+    <privalia.gingerspec.version>2.2.15</privalia.gingerspec.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
@@ -59,6 +59,12 @@
           </properties>
           <argLine>
             -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar
+
+            <!--Remove for version below 11-->
+            --add-opens java.base/java.lang=ALL-UNNAMED
+            --add-opens java.base/java.io=ALL-UNNAMED
+            --add-opens java.base/java.util=ALL-UNNAMED
+            --add-opens java.base/java.base=ALL-UNNAMED
           </argLine>
           <useSystemClassloader>true</useSystemClassloader>
         </configuration>
